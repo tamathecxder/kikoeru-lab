@@ -1,0 +1,23 @@
+name: ingest
+
+# Daily cron that triggers the protected ingest endpoint. The job holds no
+# secrets in code — CRON_SECRET and INGEST_URL come from repo secrets.
+on:
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC daily
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger ingest
+        run: |
+          code=$(curl -sS -o /tmp/resp.json -w "%{http_code}" \
+            --max-time 300 -X POST \
+            -H "x-cron-secret: ${{ secrets.CRON_SECRET }}" \
+            "${{ secrets.INGEST_URL }}")
+          echo "HTTP $code"
+          cat /tmp/resp.json || true
+          echo
+          test "$code" = "200"

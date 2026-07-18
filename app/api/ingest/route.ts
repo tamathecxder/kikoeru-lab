@@ -7,6 +7,9 @@ import { logger } from '@/lib/utils/logger';
 // Needs node:crypto and the service-role key — never edge, never static.
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
+// Fetch + batched Gemini calls need headroom beyond the default cap.
+// Hobby allows up to 60s; Pro can raise this.
+export const maxDuration = 60;
 
 export async function POST(request: Request): Promise<Response> {
   const expected = process.env.CRON_SECRET;
