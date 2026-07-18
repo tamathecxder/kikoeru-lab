@@ -33,13 +33,15 @@ describe('analyzePosts', () => {
     const posts = Array.from({ length: 7 }, (_, i) => mkPost(i));
     const generate = vi.fn().mockResolvedValue(JSON.stringify([aiItem(0)]));
 
-    const { drafts, errors } = await analyzePosts(posts, { generate, now: NOW });
+    const { drafts, errors, analyzedIds } = await analyzePosts(posts, { generate, now: NOW });
 
     expect(generate).toHaveBeenCalledTimes(2);
     expect(errors).toHaveLength(0);
     // one draft per batch (each references its own index 0)
     expect(drafts.map((d) => d.raw_post_id)).toEqual(['id0', 'id5']);
     expect(drafts[0].urgency_score).toBeGreaterThan(0);
+    // both batches completed -> every post is analyzed
+    expect(analyzedIds).toHaveLength(7);
   });
 
   it('drops an out-of-range post_index and records an error', async () => {
@@ -71,20 +73,25 @@ describe('analyzePosts', () => {
       .mockResolvedValueOnce(JSON.stringify([aiItem(0)])) // batch 1 ok
       .mockRejectedValueOnce(new Error('503 model overloaded')); // batch 2 fails
 
-    const { drafts, errors } = await analyzePosts(posts, { generate, now: NOW });
+    const { drafts, errors, analyzedIds } = await analyzePosts(posts, { generate, now: NOW });
 
     expect(drafts).toHaveLength(1);
     expect(drafts[0].raw_post_id).toBe('id0');
     expect(errors.some((e) => e.message.includes('503'))).toBe(true);
+    // batch 1 (id0..id4) analyzed; the failed batch 2 (id5) is left unprocessed
+    expect(analyzedIds).toEqual(['id0', 'id1', 'id2', 'id3', 'id4']);
+    expect(analyzedIds).not.toContain('id5');
   });
 
   it('records unparseable batch output as an error and continues', async () => {
     const posts = [mkPost(0)];
     const generate = vi.fn().mockResolvedValue('garbage {not json');
 
-    const { drafts, errors } = await analyzePosts(posts, { generate, now: NOW });
+    const { drafts, errors, analyzedIds } = await analyzePosts(posts, { generate, now: NOW });
 
     expect(drafts).toHaveLength(0);
     expect(errors.some((e) => e.context === 'batch')).toBe(true);
+    // unparseable batch is not analyzed -> post left for retry
+    expect(analyzedIds).toHaveLength(0);
   });
 });

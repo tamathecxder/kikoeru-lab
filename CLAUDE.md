@@ -67,7 +67,7 @@ urgency_score = clamp(0,100,
 
 ### Gemini call specifics
 
-`gemini-2.0-flash` via `@google/genai`, `temperature: 0.3`. Clamp each post `body` to 2000 chars before sending. On `JSON.parse` failure, strip a ```` ```json ```` fence and retry once; if it still fails, log and skip the batch. Drop any `post_index` outside the batch range — never trust the model's indexing.
+`gemini-flash-latest` via `@google/genai`, `temperature: 0.3` (the spec's `gemini-2.0-flash` has a free-tier quota of 0 on new keys, so the free-tier `flash-latest` alias is used instead; 429s are retried with backoff). Clamp each post `body` to 2000 chars before sending. On `JSON.parse` failure, strip a ```` ```json ```` fence and retry once; if it still fails, log and skip the batch. Drop any `post_index` outside the batch range — never trust the model's indexing.
 
 ## Working conventions
 

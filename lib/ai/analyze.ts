@@ -6,8 +6,15 @@ import { computeUrgency, type ScoreBreakdown } from '@/lib/ai/scoring';
 import { logger } from '@/lib/utils/logger';
 import type { SourceError } from '@/lib/sources/types';
 
-const MODEL = 'gemini-2.0-flash';
+// gemini-flash-latest is the free-tier flash alias. The spec's gemini-2.0-flash
+// has a free-tier quota of 0 on new keys, so this is the working free model.
+const MODEL = 'gemini-flash-latest';
 const BATCH_SIZE = 5;
+const MAX_RETRIES = 2;
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 /** A raw_posts row, as supplied by the ingest route in Milestone 5. */
 export interface AnalyzablePost {
@@ -43,12 +50,26 @@ export const geminiGenerate: GenerateFn = async (prompt) => {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error('GEMINI_API_KEY is not set');
   const ai = new GoogleGenAI({ apiKey });
-  const res = await ai.models.generateContent({
-    model: MODEL,
-    contents: prompt,
-    config: { temperature: 0.3 },
-  });
-  return res.text ?? '';
+
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const res = await ai.models.generateContent({
+        model: MODEL,
+        contents: prompt,
+        config: { temperature: 0.3 },
+      });
+      return res.text ?? '';
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      // Retry transient rate limits with backoff; a hard 0-quota still throws
+      // after the retries and is handled per-batch upstream.
+      if (attempt < MAX_RETRIES && /429|RESOURCE_EXHAUSTED|rate limit/i.test(message)) {
+        await sleep(4000 * (attempt + 1));
+        continue;
+      }
+      throw err;
+    }
+  }
 };
 
 function chunk<T>(items: T[], size: number): T[][] {
@@ -62,15 +83,21 @@ function chunk<T>(items: T[], size: number): T[][] {
  * computed in code. Never throws: a failed or unparseable batch, or an
  * out-of-range post_index, is recorded as an error and skipped while the rest
  * of the job continues.
+ *
+ * `analyzedIds` lists the posts whose batch actually completed (generate + parse
+ * succeeded, whether or not the AI produced an idea). Posts in a batch that
+ * failed to generate or parse are NOT included, so the caller leaves them
+ * unprocessed for a later retry instead of silently burning them.
  */
 export async function analyzePosts(
   posts: AnalyzablePost[],
   opts: { generate?: GenerateFn; now?: number } = {},
-): Promise<{ drafts: IdeaDraft[]; errors: SourceError[] }> {
+): Promise<{ drafts: IdeaDraft[]; errors: SourceError[]; analyzedIds: string[] }> {
   const generate = opts.generate ?? geminiGenerate;
   const now = opts.now ?? Date.now();
   const drafts: IdeaDraft[] = [];
   const errors: SourceError[] = [];
+  const analyzedIds: string[] = [];
 
   for (const batch of chunk(posts, BATCH_SIZE)) {
     const prompt = buildPrompt(batch.map((p, index) => ({ index, title: p.title, body: p.body })));
@@ -82,17 +109,25 @@ export async function analyzePosts(
       const message = err instanceof Error ? err.message : 'generate failed';
       errors.push({ context: 'batch', message });
       logger.error('ai batch generate failed', { message });
-      continue;
+      continue; // batch not analyzed -> its posts stay unprocessed for retry
     }
 
     const { items, errors: parseErrors } = parseAiResponse(text);
     errors.push(...parseErrors);
 
+    // A wholesale parse failure (unparseable / not an array) is a batch error;
+    // per-item failures use context "item[i]". Only the former means the batch
+    // did not complete, so leave its posts for retry.
+    if (parseErrors.some((e) => e.context === 'batch')) {
+      continue;
+    }
+    analyzedIds.push(...batch.map((p) => p.id));
+
     for (const item of items) {
       const post = batch[item.post_index];
       if (!post) {
         // Model returned an index outside this batch — never trust its indexing.
-        errors.push({ context: 'batch', message: `dropped out-of-range post_index ${item.post_index}` });
+        errors.push({ context: 'index', message: `dropped out-of-range post_index ${item.post_index}` });
         continue;
       }
 
@@ -122,5 +157,5 @@ export async function analyzePosts(
     }
   }
 
-  return { drafts, errors };
+  return { drafts, errors, analyzedIds };
 }

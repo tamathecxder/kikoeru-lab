@@ -69,22 +69,22 @@ export async function runIngest(opts: RunOptions): Promise<RunSummary> {
 
   // 3. Analyze the unprocessed backlog.
   let ideasCreated = 0;
-  let unprocessedIds: string[] = [];
   try {
     const unprocessed = await store.fetchUnprocessed(limit);
-    unprocessedIds = unprocessed.map((p) => p.id);
 
     if (unprocessed.length > 0) {
-      const { drafts, errors: analyzeErrors } = await analyzePosts(unprocessed, {
+      const { drafts, errors: analyzeErrors, analyzedIds } = await analyzePosts(unprocessed, {
         generate: opts.generate,
         now,
       });
       errors.push(...analyzeErrors);
 
-      // 4. Insert ideas, then mark the batch processed. If the insert fails we
-      // deliberately leave the posts unprocessed so the next run retries them.
+      // 4. Insert ideas, then mark processed ONLY the posts whose batch actually
+      // completed. Posts in a failed batch (e.g. AI quota/error) stay unprocessed
+      // so a later run retries them instead of silently burning them. If the
+      // insert fails we also leave everything unprocessed.
       ideasCreated = await store.insertIdeas(drafts);
-      await store.markProcessed(unprocessedIds);
+      await store.markProcessed(analyzedIds);
     }
   } catch (err) {
     errors.push({ context: 'analyze', message: err instanceof Error ? err.message : 'analyze failed' });

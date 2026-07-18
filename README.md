@@ -12,7 +12,7 @@ For the architecture rules and the ingest pipeline in detail, see
 ## Stack
 
 Next.js 16 (App Router, TypeScript strict) · Supabase Postgres (database only) ·
-Tailwind + shadcn/ui · Google Gemini 2.0 Flash (`@google/genai`) · Zod ·
+Tailwind + shadcn/ui · Google Gemini (`gemini-flash-latest`, `@google/genai`) · Zod ·
 GitHub Actions (cron) · Vercel.
 
 ## Prerequisites
