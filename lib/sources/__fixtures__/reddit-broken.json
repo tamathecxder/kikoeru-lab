@@ -1,0 +1,69 @@
+{
+  "kind": "Listing",
+  "data": {
+    "after": null,
+    "before": null,
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "id": "del001",
+          "title": "Post by a deleted author",
+          "selftext": "The author is gone but the post text remains.",
+          "author": "[deleted]",
+          "score": 10,
+          "num_comments": 2,
+          "created_utc": 1752710400,
+          "permalink": "/r/sysadmin/comments/del001/post_by_a_deleted_author/",
+          "url": "https://www.reddit.com/r/sysadmin/comments/del001/post_by_a_deleted_author/",
+          "subreddit": "sysadmin"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "rem002",
+          "title": "Body was removed by a moderator",
+          "selftext": "[removed]",
+          "author": "some_user",
+          "score": 5,
+          "num_comments": 0,
+          "created_utc": 1752624000,
+          "permalink": "/r/devops/comments/rem002/body_was_removed/",
+          "url": "https://www.reddit.com/r/devops/comments/rem002/body_was_removed/",
+          "subreddit": "devops"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "link003",
+          "title": "A link post with no selftext",
+          "selftext": "",
+          "author": "linker",
+          "score": 20,
+          "num_comments": 4,
+          "created_utc": 1752537600,
+          "permalink": "/r/SaaS/comments/link003/a_link_post/",
+          "url": "https://example.com/product",
+          "subreddit": "SaaS"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "gone004",
+          "title": "[deleted]",
+          "selftext": "[deleted]",
+          "author": "[deleted]",
+          "score": 0,
+          "num_comments": 0,
+          "created_utc": 1752451200,
+          "permalink": "/r/webdev/comments/gone004/deleted/",
+          "url": "https://www.reddit.com/r/webdev/comments/gone004/deleted/",
+          "subreddit": "webdev"
+        }
+      }
+    ]
+  }
+}

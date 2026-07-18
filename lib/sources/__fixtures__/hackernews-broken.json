@@ -1,0 +1,34 @@
+{
+  "hits": [
+    {
+      "objectID": "99000001",
+      "title": "Valid story that should parse",
+      "url": "https://example.com/a",
+      "story_text": null,
+      "author": "alice",
+      "points": 5,
+      "num_comments": 3,
+      "created_at": "2026-07-01T10:00:00.000Z"
+    },
+    {
+      "objectID": "99000002",
+      "title": null,
+      "url": "https://example.com/b",
+      "story_text": "has text but no title",
+      "author": "bob",
+      "points": 1,
+      "num_comments": 0,
+      "created_at": "2026-07-02T10:00:00.000Z"
+    },
+    {
+      "objectID": null,
+      "title": "has title but no id",
+      "url": "https://example.com/c",
+      "story_text": null,
+      "author": "carol",
+      "points": 2,
+      "num_comments": 1,
+      "created_at": "2026-07-03T10:00:00.000Z"
+    }
+  ]
+}

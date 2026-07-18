@@ -1,0 +1,910 @@
+{
+  "exhaustive": {
+    "nbHits": false,
+    "typo": false
+  },
+  "exhaustiveNbHits": false,
+  "exhaustiveTypo": false,
+  "hits": [
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "CzaxTanmay"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hi everyone,<p>I’ve been building Proton to solve a specific pain point in the Go ecosystem: building native GUIs without the &quot;web dev&quot; trade-offs or CGO complexity.<p>If you’ve tried to build desktop apps in Go, you’ve likely dealt with the <em>frustration</em> of CGO dependencies, bloated build pipelines, or feeling like you’re just writing a thin wrapper around a browser.<p>Proton aims to fix this with a clean, pure-Go approach:<p>Zero CGO: Cross-compile to Windows and macOS seamlessly from any machine.<p>Immediate-Mode API: No setState, no complex component trees, and no XML. You just write your draw function, and it runs every frame.<p>API Immunity: The public API is shielded from the underlying rendering engine (built on top of Gio). If the backend changes, your code remains untouched.<p>Full Feature Set: Includes inputs, lists, overlays, alerts, and 46 built-in themes (or easy custom hex-code styling).<p>It’s currently in development for v0.4.0, but it’s stable enough for cross-platform apps and even supports Android deployment out of the box.<p>I’d love to hear what you think, especially if you’ve been looking for a more &quot;Go-native&quot; way to handle GUIs.<p>Repo: <a href=\"https://github.com/CzaxStudio/proton\" rel=\"nofollow\">https://github.com/CzaxStudio/proton</a>"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Proton – A Pure Go, Immediate-Mode GUI Library (Zero CGO)"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_CzaxTanmay",
+        "story_48948466",
+        "show_hn"
+      ],
+      "author": "CzaxTanmay",
+      "children": [
+        48956659,
+        48950190
+      ],
+      "created_at": "2026-07-17T15:20:11Z",
+      "created_at_i": 1784301611,
+      "num_comments": 2,
+      "objectID": "48948466",
+      "points": 3,
+      "story_id": 48948466,
+      "story_text": "Hi everyone,<p>I’ve been building Proton to solve a specific pain point in the Go ecosystem: building native GUIs without the &quot;web dev&quot; trade-offs or CGO complexity.<p>If you’ve tried to build desktop apps in Go, you’ve likely dealt with the frustration of CGO dependencies, bloated build pipelines, or feeling like you’re just writing a thin wrapper around a browser.<p>Proton aims to fix this with a clean, pure-Go approach:<p>Zero CGO: Cross-compile to Windows and macOS seamlessly from any machine.<p>Immediate-Mode API: No setState, no complex component trees, and no XML. You just write your draw function, and it runs every frame.<p>API Immunity: The public API is shielded from the underlying rendering engine (built on top of Gio). If the backend changes, your code remains untouched.<p>Full Feature Set: Includes inputs, lists, overlays, alerts, and 46 built-in themes (or easy custom hex-code styling).<p>It’s currently in development for v0.4.0, but it’s stable enough for cross-platform apps and even supports Android deployment out of the box.<p>I’d love to hear what you think, especially if you’ve been looking for a more &quot;Go-native&quot; way to handle GUIs.<p>Repo: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;CzaxStudio&#x2F;proton\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;CzaxStudio&#x2F;proton</a>",
+      "title": "Show HN: Proton – A Pure Go, Immediate-Mode GUI Library (Zero CGO)",
+      "updated_at": "2026-07-18T12:05:15Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "ThierryRkt"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I've been trying to promote my project for a week now and it's terrible. I've try to post on X continuously and also on Reddit.\nI even follow the trend &quot;looking to connect with...&quot; but so far no user/feedback yet. \nHow do you guys handle such <em>frustration</em> and keeping your mental health ?"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: How do you handle the actual situation with so much AI noises"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_ThierryRkt",
+        "story_48947498",
+        "ask_hn"
+      ],
+      "author": "ThierryRkt",
+      "children": [
+        48957221,
+        48947843,
+        48948937,
+        48948061,
+        48947722,
+        48950318,
+        48949390
+      ],
+      "created_at": "2026-07-17T14:01:09Z",
+      "created_at_i": 1784296869,
+      "num_comments": 10,
+      "objectID": "48947498",
+      "points": 4,
+      "story_id": 48947498,
+      "story_text": "I&#x27;ve been trying to promote my project for a week now and it&#x27;s terrible. I&#x27;ve try to post on X continuously and also on Reddit.\nI even follow the trend &quot;looking to connect with...&quot; but so far no user&#x2F;feedback yet. \nHow do you guys handle such frustration and keeping your mental health ?",
+      "title": "Ask HN: How do you handle the actual situation with so much AI noises",
+      "updated_at": "2026-07-18T12:01:30Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "lpierge"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hi everyone,<p>I'm used to write (low-level) C and Win32 apps. Recently, I shared some of my open-source projects on Reddit. They got quite a bit of traction, resulting in a sudden spike of visitors and lot of unique Git clones in a few hours. This is one of my post, just to let you see what kind of code I'm used to write:<p>https://www.reddit.com/r/windowsapps/comments/1uw30gd/explorerbgtoolredux_a_refactoringrewrite_of_the/<p>Shortly after, I realized my entire GitHub account was shadowbanned: If I log I can see it, but anyone else (or logged-out sessions) got a 404 &quot;User not found&quot; error.<p>I contacted GitHub Support and after dealing with a virtual assistant (!), a human support agent (Pinto) finally replied with an ultimatum:<p>&quot;At this time, we ask that you to remove the following repository or make it private: https://github.com/lpierge/Calimero&quot;\nThey granted me temporary access to do this.<p>BTW, they choosed that project in an absolutely arbitrary manner, just to name one with no valid reason. Calimero is a desktop manager which, besides some fancy things as flying icons, allow the user to download images directly from site like Picsum, Pexels, Reddit (every subreddit) and Danbooru. I suspect their automated abuse-detection system flagged it as potential malware/ransomware due to raw heuristics, and the support staff simply didn't bother to actually look at the source code.<p>I replied to support asking what specific terms of service the project is infringing. Their response? Complete silence so far, while my entire public presence on GitHub remains blocked unless I delete my own legitimate work.<p>This arbitrary &quot;guilty until proven innocent&quot; approach with zero technical explanation is incredibly <em>frustrating</em>.<p>Has anyone faced a similar compliance lockout on GitHub? How did you resolve it without deleting your open-source code? Any suggestion about what to do?<p>Thanks, Luca"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "GitHub banned my account after my projects suddenly spiked on Reddit"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_lpierge",
+        "story_48934639",
+        "ask_hn"
+      ],
+      "author": "lpierge",
+      "children": [
+        48934792,
+        48934672
+      ],
+      "created_at": "2026-07-16T13:54:59Z",
+      "created_at_i": 1784210099,
+      "num_comments": 4,
+      "objectID": "48934639",
+      "points": 2,
+      "story_id": 48934639,
+      "story_text": "Hi everyone,<p>I&#x27;m used to write (low-level) C and Win32 apps. Recently, I shared some of my open-source projects on Reddit. They got quite a bit of traction, resulting in a sudden spike of visitors and lot of unique Git clones in a few hours. This is one of my post, just to let you see what kind of code I&#x27;m used to write:<p>https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;windowsapps&#x2F;comments&#x2F;1uw30gd&#x2F;explorerbgtoolredux_a_refactoringrewrite_of_the&#x2F;<p>Shortly after, I realized my entire GitHub account was shadowbanned: If I log I can see it, but anyone else (or logged-out sessions) got a 404 &quot;User not found&quot; error.<p>I contacted GitHub Support and after dealing with a virtual assistant (!), a human support agent (Pinto) finally replied with an ultimatum:<p>&quot;At this time, we ask that you to remove the following repository or make it private: https:&#x2F;&#x2F;github.com&#x2F;lpierge&#x2F;Calimero&quot;\nThey granted me temporary access to do this.<p>BTW, they choosed that project in an absolutely arbitrary manner, just to name one with no valid reason. Calimero is a desktop manager which, besides some fancy things as flying icons, allow the user to download images directly from site like Picsum, Pexels, Reddit (every subreddit) and Danbooru. I suspect their automated abuse-detection system flagged it as potential malware&#x2F;ransomware due to raw heuristics, and the support staff simply didn&#x27;t bother to actually look at the source code.<p>I replied to support asking what specific terms of service the project is infringing. Their response? Complete silence so far, while my entire public presence on GitHub remains blocked unless I delete my own legitimate work.<p>This arbitrary &quot;guilty until proven innocent&quot; approach with zero technical explanation is incredibly frustrating.<p>Has anyone faced a similar compliance lockout on GitHub? How did you resolve it without deleting your open-source code? Any suggestion about what to do?<p>Thanks, Luca",
+      "title": "GitHub banned my account after my projects suddenly spiked on Reddit",
+      "updated_at": "2026-07-16T14:23:55Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "suchintan"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hey everyone, Suchintan from Skyvern (YC S23) here.<p>We're open sourcing something we built internally: Rustwright: Playwright on an in-process Rust CDP engine. It’s a full rewrite of Playwright in Rust using CDP, which consumes 70% less memory than Playwright’s node driver, and is 2.55x faster to boot.<p>We run a lot of browser automations at Skyvern, and while we were doing some performance tuning, we realized the playwright driver was the source of a lot of wasted memory and CPU cycles. We built Rustwright to solve that problem, and instead of making it an internal library, we thought this might be valuable to the open source community<p>The core idea fits in two lines:<p><pre><code>  playwright-python:\n\n  your code ──pipe──► Node driver ──CDP──► Chrome\n\n  rustwright:\n\n  your code ─────── raw CDP  ────────► Chrome\n</code></pre>\nThe way playwright-python works is that it pipes every call through a bundled Node driver process. This brings its own added memory / cpu overhead, whereas Rustwright drives Chrome over raw CDP from a Rust core, effectively skipping that overhead.<p>Replacing Playwright’s node driver with a direct CDP connection changes three things:<p>1. Less abstraction means less complexity. The driver subprocess and its pipe sends CDP commands straight to Chrome instead of going through a middle layer with its own overhead. In our experimentation, the new engine is approx. 2.55× faster and uses 70% less memory than playwright<p>2. No Playwright driver fingerprint. Stock playwright screamed “I’m a bot” as anyone used it, and while well intentioned, created a <em>frustrating</em> rite of passage for new developers. With this rewrite, the driver doesn’t exist, so its famous signatures (__playwright__binding__ globals, Runtime.enable on the default path (the well-known console-serialization leak)) don’t exist. We just want to be clear: this means there are no Playwright-specific automation fingerprints, the library is not &quot;undetectable&quot;<p>3. An interoperable rust wrapper makes migration easy: Because rustwright is meant to be interoperable with Playwright, a developer does not need to migrate every callsite to direct CDP. Instead, they can just a one-line import change: from rustwright.sync_api import sync_playwright.All events (clicking / typing) go through the rust shim and execute real CDP calls (not synthetic DOM calls). Complex cases like cross-origin iframes also auto-attach with frame_locator() routing across origins, as you would want them to.<p>Rustwright is built on Tokio (WebSocket, plus opt-in Unix-pipe transport) and the bindings are exposed to other languages in-process through thin language specific bindings (eg PyO3 bindings for Python and napi-rs bindings for Node). We’re planning on adding support for more languages soon :)<p>Want to give it a try? Change one line of code!<p><pre><code>  pip install rustwright\n\n  - from playwright.sync_api import sync_playwright\n\n  + from rustwright.sync_api import sync_playwright\n</code></pre>\nLet us know what you think: <a href=\"https://github.com/Skyvern-AI/rustwright\" rel=\"nofollow\">https://github.com/Skyvern-AI/rustwright</a>"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Rustwright: Playwright rewritten in Rust that uses 70% less memory"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://github.com/Skyvern-AI/rustwright"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_suchintan",
+        "story_48923788"
+      ],
+      "author": "suchintan",
+      "children": [
+        48939000,
+        48939855,
+        48928074,
+        48923789,
+        48936190
+      ],
+      "created_at": "2026-07-15T16:57:28Z",
+      "created_at_i": 1784134648,
+      "num_comments": 4,
+      "objectID": "48923788",
+      "points": 11,
+      "story_id": 48923788,
+      "story_text": "Hey everyone, Suchintan from Skyvern (YC S23) here.<p>We&#x27;re open sourcing something we built internally: Rustwright: Playwright on an in-process Rust CDP engine. It’s a full rewrite of Playwright in Rust using CDP, which consumes 70% less memory than Playwright’s node driver, and is 2.55x faster to boot.<p>We run a lot of browser automations at Skyvern, and while we were doing some performance tuning, we realized the playwright driver was the source of a lot of wasted memory and CPU cycles. We built Rustwright to solve that problem, and instead of making it an internal library, we thought this might be valuable to the open source community<p>The core idea fits in two lines:<p><pre><code>  playwright-python:\n\n  your code ──pipe──► Node driver ──CDP──► Chrome\n\n  rustwright:\n\n  your code ─────── raw CDP  ────────► Chrome\n</code></pre>\nThe way playwright-python works is that it pipes every call through a bundled Node driver process. This brings its own added memory &#x2F; cpu overhead, whereas Rustwright drives Chrome over raw CDP from a Rust core, effectively skipping that overhead.<p>Replacing Playwright’s node driver with a direct CDP connection changes three things:<p>1. Less abstraction means less complexity. The driver subprocess and its pipe sends CDP commands straight to Chrome instead of going through a middle layer with its own overhead. In our experimentation, the new engine is approx. 2.55× faster and uses 70% less memory than playwright<p>2. No Playwright driver fingerprint. Stock playwright screamed “I’m a bot” as anyone used it, and while well intentioned, created a frustrating rite of passage for new developers. With this rewrite, the driver doesn’t exist, so its famous signatures (__playwright__binding__ globals, Runtime.enable on the default path (the well-known console-serialization leak)) don’t exist. We just want to be clear: this means there are no Playwright-specific automation fingerprints, the library is not &quot;undetectable&quot;<p>3. An interoperable rust wrapper makes migration easy: Because rustwright is meant to be interoperable with Playwright, a developer does not need to migrate every callsite to direct CDP. Instead, they can just a one-line import change: from rustwright.sync_api import sync_playwright.All events (clicking &#x2F; typing) go through the rust shim and execute real CDP calls (not synthetic DOM calls). Complex cases like cross-origin iframes also auto-attach with frame_locator() routing across origins, as you would want them to.<p>Rustwright is built on Tokio (WebSocket, plus opt-in Unix-pipe transport) and the bindings are exposed to other languages in-process through thin language specific bindings (eg PyO3 bindings for Python and napi-rs bindings for Node). We’re planning on adding support for more languages soon :)<p>Want to give it a try? Change one line of code!<p><pre><code>  pip install rustwright\n\n  - from playwright.sync_api import sync_playwright\n\n  + from rustwright.sync_api import sync_playwright\n</code></pre>\nLet us know what you think: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;Skyvern-AI&#x2F;rustwright\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Skyvern-AI&#x2F;rustwright</a>",
+      "title": "Rustwright: Playwright rewritten in Rust that uses 70% less memory",
+      "updated_at": "2026-07-18T04:01:29Z",
+      "url": "https://github.com/Skyvern-AI/rustwright"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "cobbzilla"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I recently wrote a Google doc to describe a presentation. I used a Heading 1 style for each &quot;Slide N: Description&quot; section, and it was otherwise cleanly formatted.<p>Then I hit the magic Gemini button and asked (more or less) &quot;Make me a Google Slides presentation based on this document&quot;<p>Gemini (paraphrasing): &quot;Oh, sorry, I can't create new documents in Google Drive&quot;.<p>OK, I create a new blank Google Slides document. I press the magic Gemini button. After some preamble prompt BS, I paste my &quot;Slides&quot; document content, and ask it to create me some slides.<p>Gemini (paraphrasing): &quot;Oh, sorry, I can only work on one slide at a time&quot;.<p>WTF? I go to a different frontier LLM, I ask it to make me a PPTX file from my description (which I downloaded from Google docs as markdown). After a few minutes I have a nice PPTX file. I upload that to Google Drive and open it. Google converts it to Slides. NOW, finally, I have the joy of improving one slide at a time with Gemini.<p>Why does my workflow suck so bad here? There must be a better way! Please help me HN.<p>I'm also keen to hear what are some actual cool tricks that do work with Gemini and/or <em>frustrations</em> others have had. Let loose."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: How useful is Gemini for Google Apps?"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_cobbzilla",
+        "story_48913970",
+        "ask_hn"
+      ],
+      "author": "cobbzilla",
+      "children": [
+        48927648,
+        48914023,
+        48925371,
+        48917307
+      ],
+      "created_at": "2026-07-14T22:55:13Z",
+      "created_at_i": 1784069713,
+      "num_comments": 4,
+      "objectID": "48913970",
+      "points": 3,
+      "story_id": 48913970,
+      "story_text": "I recently wrote a Google doc to describe a presentation. I used a Heading 1 style for each &quot;Slide N: Description&quot; section, and it was otherwise cleanly formatted.<p>Then I hit the magic Gemini button and asked (more or less) &quot;Make me a Google Slides presentation based on this document&quot;<p>Gemini (paraphrasing): &quot;Oh, sorry, I can&#x27;t create new documents in Google Drive&quot;.<p>OK, I create a new blank Google Slides document. I press the magic Gemini button. After some preamble prompt BS, I paste my &quot;Slides&quot; document content, and ask it to create me some slides.<p>Gemini (paraphrasing): &quot;Oh, sorry, I can only work on one slide at a time&quot;.<p>WTF? I go to a different frontier LLM, I ask it to make me a PPTX file from my description (which I downloaded from Google docs as markdown). After a few minutes I have a nice PPTX file. I upload that to Google Drive and open it. Google converts it to Slides. NOW, finally, I have the joy of improving one slide at a time with Gemini.<p>Why does my workflow suck so bad here? There must be a better way! Please help me HN.<p>I&#x27;m also keen to hear what are some actual cool tricks that do work with Gemini and&#x2F;or frustrations others have had. Let loose.",
+      "title": "Ask HN: How useful is Gemini for Google Apps?",
+      "updated_at": "2026-07-17T19:50:46Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "tbensky"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "== The problem ==<p>I’ve never been able to text properly on a phone.  I’ve tried with two thumbs, one thumb, and every other way I can think of. Nothing works for me. I can only seem to text with my right index finger while holding the phone in my left hand, which is at best is slow and full of typos.   I find myself fighting autocorrect as much as using it.  I tried swipe keyboards (gboard, etc.) but they didn't help.  Sometimes I watch people texting rapidly with both thumbs and marvel at their dexterity.  It's all very <em>frustrating</em> for me.<p>== A solution ==<p>So I set out to build a custom iPhone keyboard designed around one idea: making the keys as large as possible.<p>Initially, I wanted to build a transparent keyboard that would overlay the whole screen, but iOS doesn't allow this.  So I made as much room for larger keys in the allowed keyboard real estate by:<p>* Removing frequently used keys (spacebar, backspace and shift), and replacing them with gestures<p>* Removing keys for accessing focused keyboards (numbers, symbols, and saved phrases), also replacing them with gestures<p>* Nixing Autocorrect (which never helped me much) to recoup the room it takes.<p>Wth this maximal room, I set off to render the largest keys of a QWERTY keyboard that I could.  I found that the maximum key size is constrained by the middle row of the QWERTY layout. Once those nine keys are made as large as possible, the third row is naturally centered with two additional keys (here, Return and Fix-it). This of course means that the ten letters on the top row won't quite fit. So I made the whole row sway slowly left and right, forcing the Q and P keys to share full visibility. A little different, but I can manage tapping a large, slowly moving target.<p>More recently, I added support for Apple’s on-device language model, which takes whatever mess I create, and cleans it up into something I can actually send.  (I know that iOS has a 'proofread' feature, but it requires too many taps; I rarely use it while texting.)<p>== Some results ==<p>After several iterations on the keyboard, it’s starting to genuinely help me text faster (with just my index finger), with fewer errors and less frustration. I've been using it for about a year now, and surprisingly I'm rather hooked on it.  I don't think it's a keyboard for everyone, but now having it, I generally don't use the system keyboard anymore. I'm posting this to see if it might be useful to others.<p>== Keyboard features ==<p>* Large key QWERTY layout.<p>* The top row sways right and left (see above) having Q and P share full visibility.<p>* There are no dedicated spacebar or backspace keys; these are gesture-based:<p><pre><code>    * Swipe right = space\n\n    * Swipe left = backspace\n</code></pre>\n* Swipe down = symbols and common contractions like 's, 'll, 're, 't, etc. in one key<p>* Swipe up = numbers<p>* Swipe up again = collection of saved phrases and frequently used text<p>* Generally swipe up/down as needed to move between the stack of focused keyboards<p>* Two-finger swipe down = toggle caps<p>* Fix-it key: tap the wrench to have Apple’s on-device language model proofread and correct your text<p>== Notes ==<p>* Text correction uses Apple’s on-device language model. Your text never leaves the phone.<p>* The globe key still works normally, so you can switch to the system keyboard or emoji keyboard as needed.<p>* I found the book about early iPhone keyboard design by Ken Kocienda quite interesting.<p>* Give it a try if you like.  I’d appreciate any feedback on this keyboard. Thank you!<p>== Resources ==<p>GitHub (README):\n<a href=\"https://github.com/tbensky/iCanText\" rel=\"nofollow\">https://github.com/tbensky/iCanText</a><p>App Store:\n<a href=\"https://apps.apple.com/us/app/icantext/id6748927092\">https://apps.apple.com/us/app/icantext/id6748927092</a>"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: I can't seem to text properly on an iPhone, so I built my own keyboard"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_tbensky",
+        "story_48906844",
+        "show_hn"
+      ],
+      "author": "tbensky",
+      "children": [
+        48906906
+      ],
+      "created_at": "2026-07-14T13:49:24Z",
+      "created_at_i": 1784036964,
+      "num_comments": 1,
+      "objectID": "48906844",
+      "points": 2,
+      "story_id": 48906844,
+      "story_text": "== The problem ==<p>I’ve never been able to text properly on a phone.  I’ve tried with two thumbs, one thumb, and every other way I can think of. Nothing works for me. I can only seem to text with my right index finger while holding the phone in my left hand, which is at best is slow and full of typos.   I find myself fighting autocorrect as much as using it.  I tried swipe keyboards (gboard, etc.) but they didn&#x27;t help.  Sometimes I watch people texting rapidly with both thumbs and marvel at their dexterity.  It&#x27;s all very frustrating for me.<p>== A solution ==<p>So I set out to build a custom iPhone keyboard designed around one idea: making the keys as large as possible.<p>Initially, I wanted to build a transparent keyboard that would overlay the whole screen, but iOS doesn&#x27;t allow this.  So I made as much room for larger keys in the allowed keyboard real estate by:<p>* Removing frequently used keys (spacebar, backspace and shift), and replacing them with gestures<p>* Removing keys for accessing focused keyboards (numbers, symbols, and saved phrases), also replacing them with gestures<p>* Nixing Autocorrect (which never helped me much) to recoup the room it takes.<p>Wth this maximal room, I set off to render the largest keys of a QWERTY keyboard that I could.  I found that the maximum key size is constrained by the middle row of the QWERTY layout. Once those nine keys are made as large as possible, the third row is naturally centered with two additional keys (here, Return and Fix-it). This of course means that the ten letters on the top row won&#x27;t quite fit. So I made the whole row sway slowly left and right, forcing the Q and P keys to share full visibility. A little different, but I can manage tapping a large, slowly moving target.<p>More recently, I added support for Apple’s on-device language model, which takes whatever mess I create, and cleans it up into something I can actually send.  (I know that iOS has a &#x27;proofread&#x27; feature, but it requires too many taps; I rarely use it while texting.)<p>== Some results ==<p>After several iterations on the keyboard, it’s starting to genuinely help me text faster (with just my index finger), with fewer errors and less frustration. I&#x27;ve been using it for about a year now, and surprisingly I&#x27;m rather hooked on it.  I don&#x27;t think it&#x27;s a keyboard for everyone, but now having it, I generally don&#x27;t use the system keyboard anymore. I&#x27;m posting this to see if it might be useful to others.<p>== Keyboard features ==<p>* Large key QWERTY layout.<p>* The top row sways right and left (see above) having Q and P share full visibility.<p>* There are no dedicated spacebar or backspace keys; these are gesture-based:<p><pre><code>    * Swipe right = space\n\n    * Swipe left = backspace\n</code></pre>\n* Swipe down = symbols and common contractions like &#x27;s, &#x27;ll, &#x27;re, &#x27;t, etc. in one key<p>* Swipe up = numbers<p>* Swipe up again = collection of saved phrases and frequently used text<p>* Generally swipe up&#x2F;down as needed to move between the stack of focused keyboards<p>* Two-finger swipe down = toggle caps<p>* Fix-it key: tap the wrench to have Apple’s on-device language model proofread and correct your text<p>== Notes ==<p>* Text correction uses Apple’s on-device language model. Your text never leaves the phone.<p>* The globe key still works normally, so you can switch to the system keyboard or emoji keyboard as needed.<p>* I found the book about early iPhone keyboard design by Ken Kocienda quite interesting.<p>* Give it a try if you like.  I’d appreciate any feedback on this keyboard. Thank you!<p>== Resources ==<p>GitHub (README):\n<a href=\"https:&#x2F;&#x2F;github.com&#x2F;tbensky&#x2F;iCanText\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;tbensky&#x2F;iCanText</a><p>App Store:\n<a href=\"https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;icantext&#x2F;id6748927092\">https:&#x2F;&#x2F;apps.apple.com&#x2F;us&#x2F;app&#x2F;icantext&#x2F;id6748927092</a>",
+      "title": "Show HN: I can't seem to text properly on an iPhone, so I built my own keyboard",
+      "updated_at": "2026-07-14T14:54:19Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "cheeseblubber"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hi, my name is Kam, and today my cofounder Josh and I are shipping Finterm, a CLI that\ngives coding agents direct access to financial data: stock prices, options data, SEC\nfilings, and Ticker Deep Research, a filtered ticker news search. I’m a developer and have been a full-time trader for the past few years.Recently I have been using LLMs more and more in my trading and strategy.\nI always found it <em>frustrating</em> that Claude Code or GPT did not have direct access to actual financial information and had to rely on web search, so it couldn’t get me more\ngranular numbers for specific options pricing.<p>When making a trade I want to understand as much as possible about the stock.\nInstead of relying on analysts or interpretations of the data, I like to go directly to\nthe truth. So whenever I have a trade thesis, I break research into a few parts: company\nresearch, analyst sentiment, and market sentiment.<p>Last September I had a short thesis on Popmart Labubu's parent company. I was betting the toy was a fad and that the stock would fall. I read through the SEC filings and an LLM analyze them too: how big a driver is Labubu, what's the business model, what does the debt look like, and what looks strange enough to dig into. I compared the company to its peers on EPS and industry metrics. I asked GPT to do deep research that included around 50 queries and hundreds of pages to map every argument about the stock. Finally I looked at the options data: call/put ratios, implied volatility, recent volume, to see how the real money was betting. I made 16% over the next month.<p>The flow was painful, fetching SEC data, copy pasting filing sections in to GPT, aggregating everything by hand, and juggle a dozen chat windows.<p>In the past few months, Josh and I spent more time trying to get agents to trade autonomously. The more we dug in, the more we realized that the problem you need to solve first is giving agents access to factual information in a token-efficient way.<p>We found that agents performed better with a CLI, since it didn’t waste as many tokens as interfacing with MCP or making API calls. We designed the CLI to be self-documenting and behave similarly to skills so it would be agent-friendly.<p>Second, we batch multiple calls together. Whenever I research a ticker, I want the same few pieces of information every time—P/E ratio, revenue, current stock price, options sentiment. We let your agent make a single call, which saves tokens and gives a more complete view of a ticker.<p>When doing web searches about a ticker, you often get noisy articles (how much you would have\nmade if you had invested $X in Amazon in 2002), SEO spam, and duplicated articles covering the same topic from the same source. So our Ticker Deep Research returns a research packet: it fetches 600–800 links per ticker, strips out the 30–40% that is noise, and gives back the state of the internet on\nthat ticker—deduped, with sources labeled primary or secondary and known AI-slop sites flagged. Instead of crawling hundreds of webpages itself, your agent gets a thorough snapshot of what the market thinks about the stock.<p>We take the same approach for SEC filings.\nEven with raw filings accessible now, most quarterly and annual filings are 90–95% boilerplate and repetition. We offer raw filings, but also an SEC filing diff tool where your agent sees only the diffs: the important changes to the company.<p>Stock and options data is delayed by up to 15 minutes, which keeps costs reasonable and fits the research-first use case we’re building for.<p>We realize this is a niche product for a technical audience that likes to trade stocks using Claude Code, but it’s close to a lot of the frustrations I feel myself, so I wanted to share it and see if anyone else is interested.<p>You can sign up and npm install -g @finterm-ai/cli to test it.\nWe have a 3-day free trial (card required) and would love any feedback."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Finterm.ai Bloomberg terminal for Claude Code"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://finterm.ai/"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_cheeseblubber",
+        "story_48896257",
+        "show_hn"
+      ],
+      "author": "cheeseblubber",
+      "created_at": "2026-07-13T17:52:10Z",
+      "created_at_i": 1783965130,
+      "num_comments": 0,
+      "objectID": "48896257",
+      "points": 6,
+      "story_id": 48896257,
+      "story_text": "Hi, my name is Kam, and today my cofounder Josh and I are shipping Finterm, a CLI that\ngives coding agents direct access to financial data: stock prices, options data, SEC\nfilings, and Ticker Deep Research, a filtered ticker news search. I’m a developer and have been a full-time trader for the past few years.Recently I have been using LLMs more and more in my trading and strategy.\nI always found it frustrating that Claude Code or GPT did not have direct access to actual financial information and had to rely on web search, so it couldn’t get me more\ngranular numbers for specific options pricing.<p>When making a trade I want to understand as much as possible about the stock.\nInstead of relying on analysts or interpretations of the data, I like to go directly to\nthe truth. So whenever I have a trade thesis, I break research into a few parts: company\nresearch, analyst sentiment, and market sentiment.<p>Last September I had a short thesis on Popmart Labubu&#x27;s parent company. I was betting the toy was a fad and that the stock would fall. I read through the SEC filings and an LLM analyze them too: how big a driver is Labubu, what&#x27;s the business model, what does the debt look like, and what looks strange enough to dig into. I compared the company to its peers on EPS and industry metrics. I asked GPT to do deep research that included around 50 queries and hundreds of pages to map every argument about the stock. Finally I looked at the options data: call&#x2F;put ratios, implied volatility, recent volume, to see how the real money was betting. I made 16% over the next month.<p>The flow was painful, fetching SEC data, copy pasting filing sections in to GPT, aggregating everything by hand, and juggle a dozen chat windows.<p>In the past few months, Josh and I spent more time trying to get agents to trade autonomously. The more we dug in, the more we realized that the problem you need to solve first is giving agents access to factual information in a token-efficient way.<p>We found that agents performed better with a CLI, since it didn’t waste as many tokens as interfacing with MCP or making API calls. We designed the CLI to be self-documenting and behave similarly to skills so it would be agent-friendly.<p>Second, we batch multiple calls together. Whenever I research a ticker, I want the same few pieces of information every time—P&#x2F;E ratio, revenue, current stock price, options sentiment. We let your agent make a single call, which saves tokens and gives a more complete view of a ticker.<p>When doing web searches about a ticker, you often get noisy articles (how much you would have\nmade if you had invested $X in Amazon in 2002), SEO spam, and duplicated articles covering the same topic from the same source. So our Ticker Deep Research returns a research packet: it fetches 600–800 links per ticker, strips out the 30–40% that is noise, and gives back the state of the internet on\nthat ticker—deduped, with sources labeled primary or secondary and known AI-slop sites flagged. Instead of crawling hundreds of webpages itself, your agent gets a thorough snapshot of what the market thinks about the stock.<p>We take the same approach for SEC filings.\nEven with raw filings accessible now, most quarterly and annual filings are 90–95% boilerplate and repetition. We offer raw filings, but also an SEC filing diff tool where your agent sees only the diffs: the important changes to the company.<p>Stock and options data is delayed by up to 15 minutes, which keeps costs reasonable and fits the research-first use case we’re building for.<p>We realize this is a niche product for a technical audience that likes to trade stocks using Claude Code, but it’s close to a lot of the frustrations I feel myself, so I wanted to share it and see if anyone else is interested.<p>You can sign up and npm install -g @finterm-ai&#x2F;cli to test it.\nWe have a 3-day free trial (card required) and would love any feedback.",
+      "title": "Show HN: Finterm.ai Bloomberg terminal for Claude Code",
+      "updated_at": "2026-07-14T20:18:03Z",
+      "url": "https://finterm.ai/"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "kvasilev"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hi everyone!<p>I am a big privacy activist and I strongly believe privacy is a fundamental human right.<p>Lately, things have been quite <em>frustrating</em> to say the least. We have Meta removing end-to-end encryption over the past months, the continuing debate around EU Chat Control, and major technology companies collecting enormous amounts of data while building their own AI systems.<p>The most popular messengers are convenient because everyone already uses them. But most of them are not truly privacy-first.<p>It's also the reason why consumer social apps are such a competitive field.<p>Telegram, for example, markets itself heavily around privacy, but normal Telegram chats are not end-to-end encrypted. Users are still trusting Telegram to create, store and manage their private keys on their own servers.<p>But there are much better privacy-focused tools that I myself have also been a user of throughout my life.\nSignal stores keys locally and makes end-to-end encryption the default. SimpleX takes a more decentralized approach. Meshtastic allows hardware networks. Many of these projects are open source and solve real privacy problems.<p>But they all face the same major issue: the network problem.<p>A messenger is only useful when the people you need to talk to are using it. It is difficult to convince your friends, family, coworkers, or customers to leave the applications they already use and move somewhere else.<p>That is why I started thinking about a different approach to restore privacy in our daily lives.\nInstead of creating another messenger and asking everyone to switch, what if we could bring private encryption into the messengers and social platforms people already use?<p>That is what I am building with my side project experiment, Ekko.<p>Ekko lives inside your browser extensions or mobile keyboard. You write a message normally, Ekko PQC encrypts it locally before it reaches the messenger, and the recipient decrypts it locally on their device. The messenger only transports the encrypted content.<p>PGP showed decades ago that individuals could control their own encryption keys. But it also showed how difficult encryption becomes when users have to manually manage keys, copy messages, encrypt them, paste ciphertext, and then repeat the process to decrypt a response.<p>Strong cryptography is not enough if normal people cannot use it.<p>The goal with Ekko is to make that process seamless with modern, already popular messengers. You should not need to understand encryption algorithms or switch to self hosted solutions, move applications.<p>Ekko is still early. We have a good working prototype that I am testing with friends in early access while we build out a backend infrastructure and ace the seamless messengers integrations. It does not work perfectly just yet, but we are actively getting there!<p>The applications, browser extensions, and cryptographic code are intended to be open source.<p>The messenger may still see metadata, including who is communicating, when messages are sent, and how frequently people communicate. A platform could block encrypted messages or break an integration, but it could actively be battled back, especially when we have almost a billion Europeans about to be actively surveilled.<p>But it could give users control over the actual contents of their messages without forcing their entire social circle to move to another platform.<p>I would appreciate direct criticism, especially around the security model, key exchange, multi-device support, metadata, platform restrictions, and whether this approach actually solves enough of the network problem to be useful.<p>Just publitised this idea two days ago and started building in public so any thoughts are appreciated :)<p>https://useekko.app<p>I would love to talk! Any inquiries, suggestions or collaborations, kirill@useekko.app<p>Lets fight for the right to privacy to never be suppressed!<p>- Kirill from Ekko"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Bring seamless PQC encryption into every messenger you already use"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_kvasilev",
+        "story_48877051",
+        "ask_hn"
+      ],
+      "author": "kvasilev",
+      "children": [
+        48878204,
+        48877324
+      ],
+      "created_at": "2026-07-12T00:10:39Z",
+      "created_at_i": 1783815039,
+      "num_comments": 0,
+      "objectID": "48877051",
+      "points": 4,
+      "story_id": 48877051,
+      "story_text": "Hi everyone!<p>I am a big privacy activist and I strongly believe privacy is a fundamental human right.<p>Lately, things have been quite frustrating to say the least. We have Meta removing end-to-end encryption over the past months, the continuing debate around EU Chat Control, and major technology companies collecting enormous amounts of data while building their own AI systems.<p>The most popular messengers are convenient because everyone already uses them. But most of them are not truly privacy-first.<p>It&#x27;s also the reason why consumer social apps are such a competitive field.<p>Telegram, for example, markets itself heavily around privacy, but normal Telegram chats are not end-to-end encrypted. Users are still trusting Telegram to create, store and manage their private keys on their own servers.<p>But there are much better privacy-focused tools that I myself have also been a user of throughout my life.\nSignal stores keys locally and makes end-to-end encryption the default. SimpleX takes a more decentralized approach. Meshtastic allows hardware networks. Many of these projects are open source and solve real privacy problems.<p>But they all face the same major issue: the network problem.<p>A messenger is only useful when the people you need to talk to are using it. It is difficult to convince your friends, family, coworkers, or customers to leave the applications they already use and move somewhere else.<p>That is why I started thinking about a different approach to restore privacy in our daily lives.\nInstead of creating another messenger and asking everyone to switch, what if we could bring private encryption into the messengers and social platforms people already use?<p>That is what I am building with my side project experiment, Ekko.<p>Ekko lives inside your browser extensions or mobile keyboard. You write a message normally, Ekko PQC encrypts it locally before it reaches the messenger, and the recipient decrypts it locally on their device. The messenger only transports the encrypted content.<p>PGP showed decades ago that individuals could control their own encryption keys. But it also showed how difficult encryption becomes when users have to manually manage keys, copy messages, encrypt them, paste ciphertext, and then repeat the process to decrypt a response.<p>Strong cryptography is not enough if normal people cannot use it.<p>The goal with Ekko is to make that process seamless with modern, already popular messengers. You should not need to understand encryption algorithms or switch to self hosted solutions, move applications.<p>Ekko is still early. We have a good working prototype that I am testing with friends in early access while we build out a backend infrastructure and ace the seamless messengers integrations. It does not work perfectly just yet, but we are actively getting there!<p>The applications, browser extensions, and cryptographic code are intended to be open source.<p>The messenger may still see metadata, including who is communicating, when messages are sent, and how frequently people communicate. A platform could block encrypted messages or break an integration, but it could actively be battled back, especially when we have almost a billion Europeans about to be actively surveilled.<p>But it could give users control over the actual contents of their messages without forcing their entire social circle to move to another platform.<p>I would appreciate direct criticism, especially around the security model, key exchange, multi-device support, metadata, platform restrictions, and whether this approach actually solves enough of the network problem to be useful.<p>Just publitised this idea two days ago and started building in public so any thoughts are appreciated :)<p>https:&#x2F;&#x2F;useekko.app<p>I would love to talk! Any inquiries, suggestions or collaborations, kirill@useekko.app<p>Lets fight for the right to privacy to never be suppressed!<p>- Kirill from Ekko",
+      "title": "Bring seamless PQC encryption into every messenger you already use",
+      "updated_at": "2026-07-12T04:17:38Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "pseudolus"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Amazon layoffs take their toll in saturated job market"
+        },
+        "url": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "https://www.cnbc.com/2026/07/11/burnout-<em>frustration</em>-and-heartbreak-amazon-layoffs-take-their-toll.html"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_pseudolus",
+        "story_48876874"
+      ],
+      "author": "pseudolus",
+      "children": [
+        48876910,
+        48877301
+      ],
+      "created_at": "2026-07-11T23:37:20Z",
+      "created_at_i": 1783813040,
+      "num_comments": 2,
+      "objectID": "48876874",
+      "points": 9,
+      "story_id": 48876874,
+      "title": "Amazon layoffs take their toll in saturated job market",
+      "updated_at": "2026-07-12T19:03:27Z",
+      "url": "https://www.cnbc.com/2026/07/11/burnout-frustration-and-heartbreak-amazon-layoffs-take-their-toll.html"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "maxjustus"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "chwire is a ClickHouse client for JS that speaks the Native (columnar binary) format over HTTP and TCP. For 1M-row payloads, encoding is mostly 2–6x faster than JSONEachRow and decoding 2–8x faster. Once you add compression Native almost always wins, since the smaller payload is cheaper to compress.<p>I’ve been working on this project for the last year for use at <a href=\"https://www.hockeystack.com/\">https://www.hockeystack.com/</a>.\nIt started out of <em>frustration</em> with how CPU-heavy gzip/deflate are in the official ClickHouse JS client once you start scaling up inserts. From there it evolved into a completionist desire to make the best ClickHouse client implementation I possibly could.<p>Highlights:<p>* ZSTD/LZ4 support in browsers over HTTP and in Node/Bun/Deno over HTTP or TCP<p>* An aggressively fuzzed Native-format implementation<p><pre><code>  * Supports all types + container types at arbitrary levels of nesting, including Variant, Dynamic, JSON, Nested, and Tuple\n\n  * CI round-trips ClickHouse’s own generateRandom and generateRandomStructure and I’ve got a separate fuzzing implementation which includes JSON, Variant and Dynamic\n\n  * The parser is synchronous and resumable internally. The async wrapper buffers blocks and fetches more data whenever there isn’t enough available to parse a column.\n</code></pre>\n* A fully functional TCP client for Node/Bun/Deno<p><pre><code>  * Supports ProfileEvents, logs, progress, and the other protocol packet types\n</code></pre>\n* Supports external tables (<a href=\"https://clickhouse.com/docs/engines/table-engines/special/external-data\" rel=\"nofollow\">https://clickhouse.com/docs/engines/table-engines/special/ex...</a>)<p>* Supports native query params (<a href=\"https://clickhouse.com/docs/sql-reference/syntax#defining-and-using-query-parameters\" rel=\"nofollow\">https://clickhouse.com/docs/sql-reference/syntax#defining-an...</a>)<p>A secondary motivation is for this to serve as a decent reference implementation in a relatively high-level—albeit kinda shitty—language. In theory, someone could point an LLM at it and use /goal or whatever to get a usable implementation in another language.<p>Hope it proves useful to folks!"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: chwire – Native-Format ClickHouse JavaScript Client over HTTP/TCP"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://github.com/maxjustus/chwire"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_maxjustus",
+        "story_48864401",
+        "show_hn"
+      ],
+      "author": "maxjustus",
+      "created_at": "2026-07-10T19:51:27Z",
+      "created_at_i": 1783713087,
+      "num_comments": 0,
+      "objectID": "48864401",
+      "points": 2,
+      "story_id": 48864401,
+      "story_text": "chwire is a ClickHouse client for JS that speaks the Native (columnar binary) format over HTTP and TCP. For 1M-row payloads, encoding is mostly 2–6x faster than JSONEachRow and decoding 2–8x faster. Once you add compression Native almost always wins, since the smaller payload is cheaper to compress.<p>I’ve been working on this project for the last year for use at <a href=\"https:&#x2F;&#x2F;www.hockeystack.com&#x2F;\">https:&#x2F;&#x2F;www.hockeystack.com&#x2F;</a>.\nIt started out of frustration with how CPU-heavy gzip&#x2F;deflate are in the official ClickHouse JS client once you start scaling up inserts. From there it evolved into a completionist desire to make the best ClickHouse client implementation I possibly could.<p>Highlights:<p>* ZSTD&#x2F;LZ4 support in browsers over HTTP and in Node&#x2F;Bun&#x2F;Deno over HTTP or TCP<p>* An aggressively fuzzed Native-format implementation<p><pre><code>  * Supports all types + container types at arbitrary levels of nesting, including Variant, Dynamic, JSON, Nested, and Tuple\n\n  * CI round-trips ClickHouse’s own generateRandom and generateRandomStructure and I’ve got a separate fuzzing implementation which includes JSON, Variant and Dynamic\n\n  * The parser is synchronous and resumable internally. The async wrapper buffers blocks and fetches more data whenever there isn’t enough available to parse a column.\n</code></pre>\n* A fully functional TCP client for Node&#x2F;Bun&#x2F;Deno<p><pre><code>  * Supports ProfileEvents, logs, progress, and the other protocol packet types\n</code></pre>\n* Supports external tables (<a href=\"https:&#x2F;&#x2F;clickhouse.com&#x2F;docs&#x2F;engines&#x2F;table-engines&#x2F;special&#x2F;external-data\" rel=\"nofollow\">https:&#x2F;&#x2F;clickhouse.com&#x2F;docs&#x2F;engines&#x2F;table-engines&#x2F;special&#x2F;ex...</a>)<p>* Supports native query params (<a href=\"https:&#x2F;&#x2F;clickhouse.com&#x2F;docs&#x2F;sql-reference&#x2F;syntax#defining-and-using-query-parameters\" rel=\"nofollow\">https:&#x2F;&#x2F;clickhouse.com&#x2F;docs&#x2F;sql-reference&#x2F;syntax#defining-an...</a>)<p>A secondary motivation is for this to serve as a decent reference implementation in a relatively high-level—albeit kinda shitty—language. In theory, someone could point an LLM at it and use &#x2F;goal or whatever to get a usable implementation in another language.<p>Hope it proves useful to folks!",
+      "title": "Show HN: chwire – Native-Format ClickHouse JavaScript Client over HTTP/TCP",
+      "updated_at": "2026-07-10T21:26:49Z",
+      "url": "https://github.com/maxjustus/chwire"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "explosionpunch"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I made a tool that detects and speeds up Tactical Mode slow-motion in Final Fantasy VII Remake/Rebirth/Revelation so that it plays smoothly in real time.<p>Motivation: The Final Fantasy VII Remake and Rebirth games are beautiful and have a unique and interesting combat system. However, what's fun to play is not necessarily fun to watch, and FFVII combat footage is filled with <em>frustrating</em> spans of slow motion while the player is choosing a command in Tactical Mode.<p>This tool detects Tactical Mode segments and speeds up those segments 100x, which, at default settings, equates to real time.<p>What about the audio? In the games, the audio continues to play at normal speed, so speeding it up by 100x just creates a jarring &quot;gap&quot; in most cases. By default, ffvii-realtime smooths over the audio so well that in most cases the artifice is not even noticeable. This is probably the most interesting and non-intuitive part of the project, and it's covered in great detail in the README: <a href=\"https://github.com/robesris/ffvii-realtime#appendix-how-does-the-sound-stay-seamless\" rel=\"nofollow\">https://github.com/robesris/ffvii-realtime#appendix-how-does...</a><p>Links to before and after videos are also included in the README.<p>This project was Claude-driven and mostly done over the course of a weekend, with some tweaks and adjustments made afterwards."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Ffvii Realtime – speed up FFVII Tactical Mode slow-mo to realtime"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://github.com/robesris/ffvii-realtime"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_explosionpunch",
+        "story_48844764",
+        "show_hn"
+      ],
+      "author": "explosionpunch",
+      "created_at": "2026-07-09T12:24:34Z",
+      "created_at_i": 1783599874,
+      "num_comments": 0,
+      "objectID": "48844764",
+      "points": 2,
+      "story_id": 48844764,
+      "story_text": "I made a tool that detects and speeds up Tactical Mode slow-motion in Final Fantasy VII Remake&#x2F;Rebirth&#x2F;Revelation so that it plays smoothly in real time.<p>Motivation: The Final Fantasy VII Remake and Rebirth games are beautiful and have a unique and interesting combat system. However, what&#x27;s fun to play is not necessarily fun to watch, and FFVII combat footage is filled with frustrating spans of slow motion while the player is choosing a command in Tactical Mode.<p>This tool detects Tactical Mode segments and speeds up those segments 100x, which, at default settings, equates to real time.<p>What about the audio? In the games, the audio continues to play at normal speed, so speeding it up by 100x just creates a jarring &quot;gap&quot; in most cases. By default, ffvii-realtime smooths over the audio so well that in most cases the artifice is not even noticeable. This is probably the most interesting and non-intuitive part of the project, and it&#x27;s covered in great detail in the README: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;robesris&#x2F;ffvii-realtime#appendix-how-does-the-sound-stay-seamless\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;robesris&#x2F;ffvii-realtime#appendix-how-does...</a><p>Links to before and after videos are also included in the README.<p>This project was Claude-driven and mostly done over the course of a weekend, with some tweaks and adjustments made afterwards.",
+      "title": "Show HN: Ffvii Realtime – speed up FFVII Tactical Mode slow-mo to realtime",
+      "updated_at": "2026-07-09T13:02:02Z",
+      "url": "https://github.com/robesris/ffvii-realtime"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "pavanputhra"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hi HN,<p>About two years ago, I started working as an independent contractor on a large voice application where we needed much deeper insight into phone calls than the existing platforms could provide.<p>We wanted to answer questions like:<p>How long was the caller waiting in the queue? Which agent rejected or missed the call? How many times was the call transferred? Who transferred it, and when? What actually happened during the conversation?<p>Getting this information turned out to be surprisingly difficult.<p>During the project, we integrated with multiple communication providers. While they handled voice reliably, I found the developer experience <em>frustrating</em>. Simple workflows often required several API calls, some data wasn’t exposed at all, and call recordings weren’t always reliable. No web hooks, all apis were polling. We even ended up recording audio locally on every agent’s computer just to avoid missing conversations, but that meant losing valuable server side context like transfers, queue events, and routing decisions.<p>What surprised me was that while the telephony side was incredibly mature, the developer experience often wasn’t.<p>So I built a proof of concept that moved the SIP signaling and media handling under our control instead of relying entirely on external platforms.<p>Once we owned the voice infrastructure, everything became much simpler.<p>We could generate a complete timeline of every call, reliably record both participants in separate channels, produce diarized transcripts, generate AI summaries and analysis, implement the IETF vCon standard (vCon), and expose clean APIs that made embedding a browser-based dialer inside CRMs straightforward.<p>What started as a proof of concept to gain better visibility into phone calls eventually grew into Comcent.<p>Today, Comcent Community Edition includes: SIP Voice Infrastructure, AI-Powered Call Analysis, Diarized Call Transcripts, Daily Summaries, SIP-Aware Voice Bots, Privacy-First Deployment, Support for the IETF vCon standard (vCon)\nand A browser dialer that can be embedded into existing web applications<p>After spending nearly two years building it, I wanted to put it in the hands of developers. Open-sourcing the Community Edition felt like the fastest way to gather real-world feedback, build trust, and continue improving the platform.<p>I also recorded a walkthrough showing the complete deployment, from a fresh virtual machine to making the first phone call.<p>Walkthrough: <a href=\"https://youtu.be/Cm4JDB95vpI\" rel=\"nofollow\">https://youtu.be/Cm4JDB95vpI</a><p>GitHub: <a href=\"https://github.com/comcent-io/comcent-ce\" rel=\"nofollow\">https://github.com/comcent-io/comcent-ce</a><p>I’d really appreciate technical feedback, criticism, feature requests, bug reports, or pull requests. Happy to answer any questions about the architecture or implementation."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Comcent CE – An open-source self-hosted Voice Infrastructure platform"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://github.com/comcent-io/comcent-ce"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_pavanputhra",
+        "story_48829604",
+        "show_hn"
+      ],
+      "author": "pavanputhra",
+      "created_at": "2026-07-08T09:22:23Z",
+      "created_at_i": 1783502543,
+      "num_comments": 0,
+      "objectID": "48829604",
+      "points": 1,
+      "story_id": 48829604,
+      "story_text": "Hi HN,<p>About two years ago, I started working as an independent contractor on a large voice application where we needed much deeper insight into phone calls than the existing platforms could provide.<p>We wanted to answer questions like:<p>How long was the caller waiting in the queue? Which agent rejected or missed the call? How many times was the call transferred? Who transferred it, and when? What actually happened during the conversation?<p>Getting this information turned out to be surprisingly difficult.<p>During the project, we integrated with multiple communication providers. While they handled voice reliably, I found the developer experience frustrating. Simple workflows often required several API calls, some data wasn’t exposed at all, and call recordings weren’t always reliable. No web hooks, all apis were polling. We even ended up recording audio locally on every agent’s computer just to avoid missing conversations, but that meant losing valuable server side context like transfers, queue events, and routing decisions.<p>What surprised me was that while the telephony side was incredibly mature, the developer experience often wasn’t.<p>So I built a proof of concept that moved the SIP signaling and media handling under our control instead of relying entirely on external platforms.<p>Once we owned the voice infrastructure, everything became much simpler.<p>We could generate a complete timeline of every call, reliably record both participants in separate channels, produce diarized transcripts, generate AI summaries and analysis, implement the IETF vCon standard (vCon), and expose clean APIs that made embedding a browser-based dialer inside CRMs straightforward.<p>What started as a proof of concept to gain better visibility into phone calls eventually grew into Comcent.<p>Today, Comcent Community Edition includes: SIP Voice Infrastructure, AI-Powered Call Analysis, Diarized Call Transcripts, Daily Summaries, SIP-Aware Voice Bots, Privacy-First Deployment, Support for the IETF vCon standard (vCon)\nand A browser dialer that can be embedded into existing web applications<p>After spending nearly two years building it, I wanted to put it in the hands of developers. Open-sourcing the Community Edition felt like the fastest way to gather real-world feedback, build trust, and continue improving the platform.<p>I also recorded a walkthrough showing the complete deployment, from a fresh virtual machine to making the first phone call.<p>Walkthrough: <a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;Cm4JDB95vpI\" rel=\"nofollow\">https:&#x2F;&#x2F;youtu.be&#x2F;Cm4JDB95vpI</a><p>GitHub: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;comcent-io&#x2F;comcent-ce\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;comcent-io&#x2F;comcent-ce</a><p>I’d really appreciate technical feedback, criticism, feature requests, bug reports, or pull requests. Happy to answer any questions about the architecture or implementation.",
+      "title": "Show HN: Comcent CE – An open-source self-hosted Voice Infrastructure platform",
+      "updated_at": "2026-07-08T09:54:10Z",
+      "url": "https://github.com/comcent-io/comcent-ce"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "16th_hop"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "This project grew out of <em>frustration</em> of trying to find out the odds of a Hantavirus pandemic. When I went to search for it, I had to wade through sports gambling, and novelty markets that distracted me from just getting a really useful number with context to know if it was accurate.<p>To solve this, my friend and I made mondael.com, which we're using to analyze, and visualize interesting prediction markets in the realm of: Geopolitics, Elections, Macro, Finance, Energy, and Science &amp; Technology.<p>The basic belief is that prediction markets can often move faster than news, but only if the data is filtered, organized, and presented in a way that separates real signal from noise. The site is free and open for all to explore. Once we had the core database working, we started adding tools around it:<p>- Live Brier scoring: track how accurate markets are across desks, tags, and topics.<p>- Cross-asset correlations: compare prediction markets with real-world assets like stocks, FX, commodities, and ETFs, including lead/lag analysis.<p>- Market structure analysis: use bubble charts to compare liquidity, volume, order-book depth, 5pp depth, spreads, and related measures.<p>- Alerts: surface events like volume bumps, leader changes, price spikes, and other unusual market activity.<p>Any feedback is appreciated and will be considered."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Mondael.com – Institutional Intelligence for Prediction Markets"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://mondael.com"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_16th_hop",
+        "story_48817234",
+        "show_hn"
+      ],
+      "author": "16th_hop",
+      "created_at": "2026-07-07T13:06:37Z",
+      "created_at_i": 1783429597,
+      "num_comments": 0,
+      "objectID": "48817234",
+      "points": 7,
+      "story_id": 48817234,
+      "story_text": "This project grew out of frustration of trying to find out the odds of a Hantavirus pandemic. When I went to search for it, I had to wade through sports gambling, and novelty markets that distracted me from just getting a really useful number with context to know if it was accurate.<p>To solve this, my friend and I made mondael.com, which we&#x27;re using to analyze, and visualize interesting prediction markets in the realm of: Geopolitics, Elections, Macro, Finance, Energy, and Science &amp; Technology.<p>The basic belief is that prediction markets can often move faster than news, but only if the data is filtered, organized, and presented in a way that separates real signal from noise. The site is free and open for all to explore. Once we had the core database working, we started adding tools around it:<p>- Live Brier scoring: track how accurate markets are across desks, tags, and topics.<p>- Cross-asset correlations: compare prediction markets with real-world assets like stocks, FX, commodities, and ETFs, including lead&#x2F;lag analysis.<p>- Market structure analysis: use bubble charts to compare liquidity, volume, order-book depth, 5pp depth, spreads, and related measures.<p>- Alerts: surface events like volume bumps, leader changes, price spikes, and other unusual market activity.<p>Any feedback is appreciated and will be considered.",
+      "title": "Show HN: Mondael.com – Institutional Intelligence for Prediction Markets",
+      "updated_at": "2026-07-14T14:51:03Z",
+      "url": "https://mondael.com"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "ud0"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I've spent almost a decade at one of the FAANG companies, and I've conducted over 400 hours of software engineering interviews. The <em>frustration</em> led me to build ScreenStack.<p>You see, the interviewing stack today is fragmented. To conduct an interview, you'll have to schedule a conference call on Zoom/Google Meet/MS Teams, then have a CoderPad session, and, most recently, connect your AI note-taker to capture notes. After the interview, it is an open secret that a lot of people paste the transcripts into ChatGPT and sometimes the code too and from there try to generate post-interview notes to send to the hiring manager or debrief team.<p>You can already see how crazy this looks. I strongly believe that everything you need to conduct an interview should be in one place: the transcript, the code, and/or the diagram (for system design interviews). So that when you want to extract valuable insights using an LLM, you have enough context about what they said, at what time and what code they produced. This is not to say the LLM makes the decision, but it helps you analyse and get a clearer picture of how the interview went so you are making hiring decisions not based on vibes but actual data.<p>I built ScreenStack, an MVP as a proof of concept, and now I'm looking for design partners. If you are currently conducting coding interviews or any interview at all and would like to try it out, please shoot me an email at screenstackhq [at] gmail dot com. I'll be happy to walk you through how it works, and hopefully you use it to conduct some interviews entirely for free; my only ask is that you give me feedback.<p>Thank you in advance."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: I ran 400 hours of interviews, so I built the tool I wished existed"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_ud0",
+        "story_48778853",
+        "show_hn"
+      ],
+      "author": "ud0",
+      "children": [
+        48790674
+      ],
+      "created_at": "2026-07-03T19:17:10Z",
+      "created_at_i": 1783106230,
+      "num_comments": 2,
+      "objectID": "48778853",
+      "points": 2,
+      "story_id": 48778853,
+      "story_text": "I&#x27;ve spent almost a decade at one of the FAANG companies, and I&#x27;ve conducted over 400 hours of software engineering interviews. The frustration led me to build ScreenStack.<p>You see, the interviewing stack today is fragmented. To conduct an interview, you&#x27;ll have to schedule a conference call on Zoom&#x2F;Google Meet&#x2F;MS Teams, then have a CoderPad session, and, most recently, connect your AI note-taker to capture notes. After the interview, it is an open secret that a lot of people paste the transcripts into ChatGPT and sometimes the code too and from there try to generate post-interview notes to send to the hiring manager or debrief team.<p>You can already see how crazy this looks. I strongly believe that everything you need to conduct an interview should be in one place: the transcript, the code, and&#x2F;or the diagram (for system design interviews). So that when you want to extract valuable insights using an LLM, you have enough context about what they said, at what time and what code they produced. This is not to say the LLM makes the decision, but it helps you analyse and get a clearer picture of how the interview went so you are making hiring decisions not based on vibes but actual data.<p>I built ScreenStack, an MVP as a proof of concept, and now I&#x27;m looking for design partners. If you are currently conducting coding interviews or any interview at all and would like to try it out, please shoot me an email at screenstackhq [at] gmail dot com. I&#x27;ll be happy to walk you through how it works, and hopefully you use it to conduct some interviews entirely for free; my only ask is that you give me feedback.<p>Thank you in advance.",
+      "title": "Show HN: I ran 400 hours of interviews, so I built the tool I wished existed",
+      "updated_at": "2026-07-05T06:11:43Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "MikaW"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I use Claude Code on a Max plan, and the usage limits, like for all of us (and esp. with dedicated Fable limits now) dictate how I will plan my day/sessions. It was super goddamn annoying clicking the usage wheel (perhaps this <em>frustration</em> is shared with /usage in terminal or CLI but I only use the desktop app), so I built this to poll Anthropic endpoint every 60 seconds and stay in my menu bar so I can always just glance up to see where I'm at.<p>build stuff: native Swift/AppKit, a single binary under 1 MB, no Electron or Node, negligible CPU/RAM. It reads the same usage metadata endpoint the usage wheel and /usage use, so it never invokes a model and spends zero tokens, observing the budget doesn't consume it. No telemetry, no analytics, no network calls except to Anthropic's own endpoints. The source is included in the download and the installer compiles it locally, so you can read exactly what runs. Auth reuses your existing Claude Code CLI login from the Keychain and refreshes via Anthropic's official OAuth refresh flow, the same thing Claude Code itself does, that step is opt-in, and there is a long-lived-token-file alternative that never involcves Keychain.<p>ofc this is unofficial and not affiliated with Anthropic, so if they change the usage endpoint it needs an update (the parser is defensive, updates are free). macOS 13+ only. Needs a Pro or Max subscription and the Claude Code CLI logged in, it does not work with raw API keys, Bedrock, or Vertex.<p>It is €2.99 one-time on Gumroad with a 30-day refund. First thing I have ever shipped for sale, so I would really appreciate feedback, especially on the auth handling. Considering open sourcing and then just selling the installer and updates/support etc but as I said I'm new to this!"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: LimitBar, a macOS menu bar app showing your Claude usage limits"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://mikaweiss6.gumroad.com/l/limitbar"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_MikaW",
+        "story_48775727",
+        "show_hn"
+      ],
+      "author": "MikaW",
+      "children": [
+        48775839,
+        48782803
+      ],
+      "created_at": "2026-07-03T14:48:01Z",
+      "created_at_i": 1783090081,
+      "num_comments": 2,
+      "objectID": "48775727",
+      "points": 2,
+      "story_id": 48775727,
+      "story_text": "I use Claude Code on a Max plan, and the usage limits, like for all of us (and esp. with dedicated Fable limits now) dictate how I will plan my day&#x2F;sessions. It was super goddamn annoying clicking the usage wheel (perhaps this frustration is shared with &#x2F;usage in terminal or CLI but I only use the desktop app), so I built this to poll Anthropic endpoint every 60 seconds and stay in my menu bar so I can always just glance up to see where I&#x27;m at.<p>build stuff: native Swift&#x2F;AppKit, a single binary under 1 MB, no Electron or Node, negligible CPU&#x2F;RAM. It reads the same usage metadata endpoint the usage wheel and &#x2F;usage use, so it never invokes a model and spends zero tokens, observing the budget doesn&#x27;t consume it. No telemetry, no analytics, no network calls except to Anthropic&#x27;s own endpoints. The source is included in the download and the installer compiles it locally, so you can read exactly what runs. Auth reuses your existing Claude Code CLI login from the Keychain and refreshes via Anthropic&#x27;s official OAuth refresh flow, the same thing Claude Code itself does, that step is opt-in, and there is a long-lived-token-file alternative that never involcves Keychain.<p>ofc this is unofficial and not affiliated with Anthropic, so if they change the usage endpoint it needs an update (the parser is defensive, updates are free). macOS 13+ only. Needs a Pro or Max subscription and the Claude Code CLI logged in, it does not work with raw API keys, Bedrock, or Vertex.<p>It is €2.99 one-time on Gumroad with a 30-day refund. First thing I have ever shipped for sale, so I would really appreciate feedback, especially on the auth handling. Considering open sourcing and then just selling the installer and updates&#x2F;support etc but as I said I&#x27;m new to this!",
+      "title": "Show HN: LimitBar, a macOS menu bar app showing your Claude usage limits",
+      "updated_at": "2026-07-04T05:13:11Z",
+      "url": "https://mikaweiss6.gumroad.com/l/limitbar"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "ismaelyws"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Hey HN, I built an email deliverability SaaS with a RAG system. It's trained on all my knowledge and hundreds of real deliverability use cases from 4+ years experience as an Email Deliverability Specialist on Upwork. It solves a <em>frustration</em> problem a lot of businesses are experiencing. I'm looking for feedback so let me know in the comments."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Hello Inbox – Maximize inbox placement for email marketing campaigns"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://www.helloinbox.email/"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_ismaelyws",
+        "story_48775649",
+        "show_hn"
+      ],
+      "author": "ismaelyws",
+      "children": [
+        48903752,
+        48801704
+      ],
+      "created_at": "2026-07-03T14:40:57Z",
+      "created_at_i": 1783089657,
+      "num_comments": 0,
+      "objectID": "48775649",
+      "points": 2,
+      "story_id": 48775649,
+      "story_text": "Hey HN, I built an email deliverability SaaS with a RAG system. It&#x27;s trained on all my knowledge and hundreds of real deliverability use cases from 4+ years experience as an Email Deliverability Specialist on Upwork. It solves a frustration problem a lot of businesses are experiencing. I&#x27;m looking for feedback so let me know in the comments.",
+      "title": "Show HN: Hello Inbox – Maximize inbox placement for email marketing campaigns",
+      "updated_at": "2026-07-14T08:32:01Z",
+      "url": "https://www.helloinbox.email/"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "aizk"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "My coworker responded to an invitation to meet up with Sichuan Chinese Venture Capitalists (the event mandates that dialect only), and she used Sichuan slang to respond.\nGrok translated her request to meet up as a _threesome._\nhttps://x.com/Richelle_Ji/status/2071796989638140253\nWe use twitter professionally to connect with developers, and this is just incredibly <em>frustrating</em>.\nWhy has AI translation stalled? Why is Grok just so sexualized? What is going on here!\nNot sure who else to share this with, hopefully hacker news can shine some light on this mess."
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Grok translated my coworker's tweet as sexualized"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_aizk",
+        "story_48739661",
+        "ask_hn"
+      ],
+      "author": "aizk",
+      "children": [
+        48739913,
+        48739936,
+        48739767
+      ],
+      "created_at": "2026-06-30T21:46:52Z",
+      "created_at_i": 1782856012,
+      "num_comments": 3,
+      "objectID": "48739661",
+      "points": 4,
+      "story_id": 48739661,
+      "story_text": "My coworker responded to an invitation to meet up with Sichuan Chinese Venture Capitalists (the event mandates that dialect only), and she used Sichuan slang to respond.\nGrok translated her request to meet up as a _threesome._\nhttps:&#x2F;&#x2F;x.com&#x2F;Richelle_Ji&#x2F;status&#x2F;2071796989638140253\nWe use twitter professionally to connect with developers, and this is just incredibly frustrating.\nWhy has AI translation stalled? Why is Grok just so sexualized? What is going on here!\nNot sure who else to share this with, hopefully hacker news can shine some light on this mess.",
+      "title": "Grok translated my coworker's tweet as sexualized",
+      "updated_at": "2026-07-01T05:34:14Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "bhaktatejas922"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "The most common failures for production agents are behavioral: looping, reasoning leakage, user <em>frustration</em>, and more. Using a frontier model like GPT or Sonnet to judge every turn is too expensive and slow to run at scale.<p>To solve this, we built Reflexes: semantic signals from agent traces, served fast and cheap over API. Built on custom kernels and a custom inference engine forked from vLLM.<p>Under the hood, it is a small LLM architected around multi-head inference. Small models need to be trained for specific tasks, but running 50 separate small models on the same input for 50 tasks makes no sense.<p>How it works:\nWe use a modern LLM with hybrid attention and remove the decode step. We built an inference engine that lets prefill compute be 99% reused from reflex to reflex, similar in spirit to older 2019-era BERT/HYDRA and older multiple-head techniques. we built the inference engine to reuse the KV/cache across inputs and compute across all reflexes. One shared backbone reads the trace once, then many heads classify different signals. Our inference engine reuses the same KV/cache and compute across all reflexes, giving us sub-30ms inference with less than 0.1% overhead for each additional reflex.<p>We took the same high-level idea and did the hard work to make it work with a modern architecture and attention. On it, we can run inference in under 30ms and serve the full request in under 90ms. If you run 4 reflexes or 100, the extra overhead is less than 2ms.<p>Why does optimizing this matter?<p>If you’re even a medium-sized startup, you’re dealing with tens of thousands of agent runs and millions of turns. If you want to track things like user <em>frustration</em> rates over time, frontier LLM-as-judge does not scale.<p>I built a similar stack at Tesla. When ML engineers needed to sample data across petabytes for signals like `is_camera_obfuscated=true`, along with 200 other things, you need to 1) spin them up quickly 2) run at scale efficiently<p>What it is not:\nA dashboard. 99% of dashboards go unused. \n100% API first and made for devs who want to use this to trigger their own stuff.<p>vibetrain a custom reflex in our dashboard, and/or then let it self improve in production: <a href=\"https://www.morphllm.com/dashboard/reflex\">https://www.morphllm.com/dashboard/reflex</a><p>Docs: <a href=\"https://docs.morphllm.com/sdk/components/reflexes/index\">https://docs.morphllm.com/sdk/components/reflexes/index</a><p>I’d love feedback from people running agents in prod: what sorts of things do you wish you could track over time across 100% of turns but cant right now?<p>TLDR: semantic signals from agent traces, super fast, cheap via API"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Show HN: Morph Reflexes – Multi-head classifiers for agent traces"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_bhaktatejas922",
+        "story_48739038",
+        "show_hn"
+      ],
+      "author": "bhaktatejas922",
+      "children": [
+        48741618,
+        48743196,
+        48739880
+      ],
+      "created_at": "2026-06-30T20:52:04Z",
+      "created_at_i": 1782852724,
+      "num_comments": 2,
+      "objectID": "48739038",
+      "points": 20,
+      "story_id": 48739038,
+      "story_text": "The most common failures for production agents are behavioral: looping, reasoning leakage, user frustration, and more. Using a frontier model like GPT or Sonnet to judge every turn is too expensive and slow to run at scale.<p>To solve this, we built Reflexes: semantic signals from agent traces, served fast and cheap over API. Built on custom kernels and a custom inference engine forked from vLLM.<p>Under the hood, it is a small LLM architected around multi-head inference. Small models need to be trained for specific tasks, but running 50 separate small models on the same input for 50 tasks makes no sense.<p>How it works:\nWe use a modern LLM with hybrid attention and remove the decode step. We built an inference engine that lets prefill compute be 99% reused from reflex to reflex, similar in spirit to older 2019-era BERT&#x2F;HYDRA and older multiple-head techniques. we built the inference engine to reuse the KV&#x2F;cache across inputs and compute across all reflexes. One shared backbone reads the trace once, then many heads classify different signals. Our inference engine reuses the same KV&#x2F;cache and compute across all reflexes, giving us sub-30ms inference with less than 0.1% overhead for each additional reflex.<p>We took the same high-level idea and did the hard work to make it work with a modern architecture and attention. On it, we can run inference in under 30ms and serve the full request in under 90ms. If you run 4 reflexes or 100, the extra overhead is less than 2ms.<p>Why does optimizing this matter?<p>If you’re even a medium-sized startup, you’re dealing with tens of thousands of agent runs and millions of turns. If you want to track things like user frustration rates over time, frontier LLM-as-judge does not scale.<p>I built a similar stack at Tesla. When ML engineers needed to sample data across petabytes for signals like `is_camera_obfuscated=true`, along with 200 other things, you need to 1) spin them up quickly 2) run at scale efficiently<p>What it is not:\nA dashboard. 99% of dashboards go unused. \n100% API first and made for devs who want to use this to trigger their own stuff.<p>vibetrain a custom reflex in our dashboard, and&#x2F;or then let it self improve in production: <a href=\"https:&#x2F;&#x2F;www.morphllm.com&#x2F;dashboard&#x2F;reflex\">https:&#x2F;&#x2F;www.morphllm.com&#x2F;dashboard&#x2F;reflex</a><p>Docs: <a href=\"https:&#x2F;&#x2F;docs.morphllm.com&#x2F;sdk&#x2F;components&#x2F;reflexes&#x2F;index\">https:&#x2F;&#x2F;docs.morphllm.com&#x2F;sdk&#x2F;components&#x2F;reflexes&#x2F;index</a><p>I’d love feedback from people running agents in prod: what sorts of things do you wish you could track over time across 100% of turns but cant right now?<p>TLDR: semantic signals from agent traces, super fast, cheap via API",
+      "title": "Show HN: Morph Reflexes – Multi-head classifiers for agent traces",
+      "updated_at": "2026-07-09T20:14:16Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "moonlighter"
+        },
+        "story_text": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "I'm a solo dev about to sell a one-time-purchase macOS desktop app, and I've been hunting for the right way to take payments and handle licensing. I wanted a merchant-of-record so I don't have to deal with global sales tax / EU VAT myself.<p>My experience so far, in case it's useful to others going through this:<p>- Lemon Squeezy: spent about a week integrating their API and testing the full purchase + license flow, and then got rejected during review with no explanation and no real path to ask why. A week of work to a dead end. <em>Frustrating</em>, and I still don't know what tripped it.<p>- Polar.sh: Went with them after the LS rejection. Onboarding and developer experience have been great so far, though I'll be honest, I haven't pushed real volume through it yet, so I can't speak to payouts or support-under-pressure.<p>- Paddle: keep hearing it recommended as the established MoR option. Haven't tried it. Is it worth the integration effort, or is it heavier than a solo shop needs? I'm considering adding a 2nd payment processor I can easily switch over to just in case polar.sh changes their minds...<p>- Gumroad anyone? Their fees are twice as much as compared to the others (10% vs. 5%, same $0.50 transaction fee though).<p>I should also note that the 'review' period on Lemon Squeezy took like 4 days until I got the rejection, whereas Polar.sh approved me with 2 minutes of submitting and verifying my identity. And they both used Stripe in the background for the verification; although Polar.sh's path via the Stripe verification took a few more steps; needed to take back and front photos of my drive license and then a selfie (presumably to match it up to the driver license photo. Lemon Squeeze didn't ask for any of those steps...<p>So for those of you actually selling software:<p>What did you settle on, and would you pick it again?<p>For the MoR options (Paddle, Polar, FastSpring, Lemon Squeezy, etc.) — how's the reality vs. the pitch on tax handling, payout reliability, and support when something breaks?<p>Anyone moved off one of these and why?<p>Trying to make a decision I won't regret in a year. Thanks!"
+        },
+        "title": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Ask HN: Which payment processor/merchant-of-record do you use in 2026?"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_moonlighter",
+        "story_48738624",
+        "ask_hn"
+      ],
+      "author": "moonlighter",
+      "children": [
+        48858472,
+        48811310
+      ],
+      "created_at": "2026-06-30T20:18:56Z",
+      "created_at_i": 1782850736,
+      "num_comments": 0,
+      "objectID": "48738624",
+      "points": 4,
+      "story_id": 48738624,
+      "story_text": "I&#x27;m a solo dev about to sell a one-time-purchase macOS desktop app, and I&#x27;ve been hunting for the right way to take payments and handle licensing. I wanted a merchant-of-record so I don&#x27;t have to deal with global sales tax &#x2F; EU VAT myself.<p>My experience so far, in case it&#x27;s useful to others going through this:<p>- Lemon Squeezy: spent about a week integrating their API and testing the full purchase + license flow, and then got rejected during review with no explanation and no real path to ask why. A week of work to a dead end. Frustrating, and I still don&#x27;t know what tripped it.<p>- Polar.sh: Went with them after the LS rejection. Onboarding and developer experience have been great so far, though I&#x27;ll be honest, I haven&#x27;t pushed real volume through it yet, so I can&#x27;t speak to payouts or support-under-pressure.<p>- Paddle: keep hearing it recommended as the established MoR option. Haven&#x27;t tried it. Is it worth the integration effort, or is it heavier than a solo shop needs? I&#x27;m considering adding a 2nd payment processor I can easily switch over to just in case polar.sh changes their minds...<p>- Gumroad anyone? Their fees are twice as much as compared to the others (10% vs. 5%, same $0.50 transaction fee though).<p>I should also note that the &#x27;review&#x27; period on Lemon Squeezy took like 4 days until I got the rejection, whereas Polar.sh approved me with 2 minutes of submitting and verifying my identity. And they both used Stripe in the background for the verification; although Polar.sh&#x27;s path via the Stripe verification took a few more steps; needed to take back and front photos of my drive license and then a selfie (presumably to match it up to the driver license photo. Lemon Squeeze didn&#x27;t ask for any of those steps...<p>So for those of you actually selling software:<p>What did you settle on, and would you pick it again?<p>For the MoR options (Paddle, Polar, FastSpring, Lemon Squeezy, etc.) — how&#x27;s the reality vs. the pitch on tax handling, payout reliability, and support when something breaks?<p>Anyone moved off one of these and why?<p>Trying to make a decision I won&#x27;t regret in a year. Thanks!",
+      "title": "Ask HN: Which payment processor/merchant-of-record do you use in 2026?",
+      "updated_at": "2026-07-10T11:35:38Z"
+    },
+    {
+      "_highlightResult": {
+        "author": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "Jasonmils910"
+        },
+        "title": {
+          "fullyHighlighted": false,
+          "matchLevel": "full",
+          "matchedWords": [
+            "frustrating"
+          ],
+          "value": "Claude suspension has been <em>frustrating</em>"
+        },
+        "url": {
+          "matchLevel": "none",
+          "matchedWords": [],
+          "value": "https://support.claude.com/en/articles/8241253-safeguards-warnings-and-appeals"
+        }
+      },
+      "_tags": [
+        "story",
+        "author_Jasonmils910",
+        "story_48718005"
+      ],
+      "author": "Jasonmils910",
+      "children": [
+        48718014,
+        48718006
+      ],
+      "created_at": "2026-06-29T11:45:43Z",
+      "created_at_i": 1782733543,
+      "num_comments": 1,
+      "objectID": "48718005",
+      "points": 3,
+      "story_id": 48718005,
+      "title": "Claude suspension has been frustrating",
+      "updated_at": "2026-06-29T15:11:37Z",
+      "url": "https://support.claude.com/en/articles/8241253-safeguards-warnings-and-appeals"
+    }
+  ],
+  "hitsPerPage": 20,
+  "nbHits": 28,
+  "nbPages": 2,
+  "page": 0,
+  "params": "query=frustrating&tags=story&numericFilters=created_at_i%3E1781795431&advancedSyntax=true&analyticsTags=backend",
+  "processingTimeMS": 7,
+  "processingTimingsMS": {
+    "_request": {
+      "queue": 47,
+      "roundTrip": 22
+    },
+    "afterFetch": {
+      "format": {
+        "highlighting": 3,
+        "total": 3
+      }
+    },
+    "fetch": {
+      "query": 5,
+      "total": 6
+    },
+    "total": 7
+  },
+  "query": "frustrating",
+  "serverTimeMS": 57
+}

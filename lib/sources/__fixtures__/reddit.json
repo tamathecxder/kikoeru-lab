@@ -1,0 +1,39 @@
+{
+  "kind": "Listing",
+  "data": {
+    "after": "t3_abc123",
+    "before": null,
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "id": "abc123",
+          "title": "Struggling to keep client invoices organized as a freelancer",
+          "selftext": "I juggle spreadsheets and email and always lose track of who has paid. There has to be a better way.",
+          "author": "freelance_dev",
+          "score": 142,
+          "num_comments": 37,
+          "created_utc": 1752710400,
+          "permalink": "/r/freelance/comments/abc123/struggling_to_keep_client_invoices_organized/",
+          "url": "https://www.reddit.com/r/freelance/comments/abc123/struggling_to_keep_client_invoices_organized/",
+          "subreddit": "freelance"
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "def456",
+          "title": "New CSS feature announcement (link post, no body)",
+          "selftext": "",
+          "author": "css_fan",
+          "score": 88,
+          "num_comments": 12,
+          "created_utc": 1752624000,
+          "permalink": "/r/webdev/comments/def456/new_css_feature_announcement/",
+          "url": "https://developer.mozilla.org/some-article",
+          "subreddit": "webdev"
+        }
+      }
+    ]
+  }
+}
