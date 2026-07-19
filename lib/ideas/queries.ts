@@ -23,6 +23,20 @@ export async function getIdeas(filters: IdeaFilters = {}): Promise<Idea[]> {
   return (data ?? []) as unknown as Idea[];
 }
 
+/** Highest-urgency idea for the landing page's "an example" section, or null. */
+export async function getTopIdea(): Promise<Idea | null> {
+  const client = getSupabaseServerClient();
+  const { data, error } = await client
+    .from('ideas')
+    .select(IDEA_COLUMNS)
+    .neq('status', 'skipped')
+    .order('urgency_score', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  if (error) throw new Error(`getTopIdea: ${error.message}`);
+  return (data as unknown as Idea) ?? null;
+}
+
 /** Fetch a single idea by id, or null if it does not exist. */
 export async function getIdeaById(id: string): Promise<Idea | null> {
   const client = getSupabaseServerClient();

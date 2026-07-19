@@ -22,7 +22,7 @@ function parseFilters(sp: SearchParams): IdeaFilters {
   return { status, effort };
 }
 
-export default async function Home({ searchParams }: { searchParams: Promise<SearchParams> }) {
+export default async function IdeasPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const filters = parseFilters(await searchParams);
   const [ideas, weekly, lastRun] = await Promise.all([getIdeas(filters), getWeeklyHeardCount(), getLatestRunAt()]);
 

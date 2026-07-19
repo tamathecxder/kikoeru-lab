@@ -9,7 +9,7 @@ function href(filters: IdeaFilters): string {
   if (filters.status) params.set('status', filters.status);
   if (filters.effort) params.set('effort', filters.effort);
   const q = params.toString();
-  return q ? `/?${q}` : '/';
+  return q ? `/ideas?${q}` : '/ideas';
 }
 
 function Item({ label, active, target }: { label: string; active: boolean; target: string }) {
