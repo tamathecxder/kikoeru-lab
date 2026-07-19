@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Newsreader, Inter_Tight } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const serif = Newsreader({
   subsets: ["latin"],
+  axes: ["opsz"],
+  variable: "--font-newsreader",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sans = Inter_Tight({
   subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Kikoeru Lab",
-  description: "Find worthwhile project ideas from real user pain points.",
+  description: "listening to what the internet complains about",
 };
+
+// Set data-theme before paint to avoid a flash: stored choice wins, otherwise
+// follow the OS preference. Kept as a tiny inline script for that reason.
+const themeInit = `(function(){try{var t=localStorage.getItem('kikoeru-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
 
 export default function RootLayout({
   children,
@@ -25,9 +32,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${serif.variable} ${sans.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
