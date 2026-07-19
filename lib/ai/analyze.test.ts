@@ -83,6 +83,22 @@ describe('analyzePosts', () => {
     expect(analyzedIds).not.toContain('id5');
   });
 
+  it('stops before the time budget and defers remaining posts', async () => {
+    const posts = Array.from({ length: 10 }, (_, i) => mkPost(i)); // 2 batches
+    const generate = vi.fn().mockResolvedValue(aiItem(0));
+
+    const { drafts, errors, analyzedIds } = await analyzePosts(posts, {
+      generate,
+      now: NOW,
+      deadlineMs: Date.now() - 1, // already past -> stop immediately
+    });
+
+    expect(generate).not.toHaveBeenCalled();
+    expect(drafts).toHaveLength(0);
+    expect(analyzedIds).toHaveLength(0);
+    expect(errors.some((e) => e.context === 'budget')).toBe(true);
+  });
+
   it('records unparseable batch output as an error and continues', async () => {
     const posts = [mkPost(0)];
     const generate = vi.fn().mockResolvedValue('garbage {not json');

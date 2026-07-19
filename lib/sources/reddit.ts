@@ -112,9 +112,11 @@ export async function fetchReddit(): Promise<FetchResult> {
     try {
       const res = await fetch(url, { headers: { 'user-agent': USER_AGENT, accept: 'application/json' } });
 
-      if (res.status === 429) {
-        errors.push({ context: sub, message: 'HTTP 429 rate limited; stopping Reddit fetch early' });
-        logger.warn('reddit rate limited', { sub });
+      // 429 (rate limited) or 403 (datacenter IP block) apply to every
+      // subreddit from this IP, so stop early instead of wasting ~2s per sub.
+      if (res.status === 429 || res.status === 403) {
+        errors.push({ context: sub, message: `HTTP ${res.status}; stopping Reddit fetch (IP blocked or rate limited)` });
+        logger.warn('reddit blocked', { sub, status: res.status });
         break;
       }
       if (!res.ok) {

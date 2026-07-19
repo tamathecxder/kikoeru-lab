@@ -10,7 +10,9 @@ import type { SourceError } from '@/lib/sources/types';
 // has a free-tier quota of 0 on new keys, so this is the working free model.
 const MODEL = 'gemini-flash-latest';
 const BATCH_SIZE = 5;
-const MAX_RETRIES = 2;
+// Keep retries cheap so one rate-limited batch can't blow the serverless budget.
+const MAX_RETRIES = 1;
+const RETRY_BACKOFF_MS = 2500;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -64,7 +66,7 @@ export const geminiGenerate: GenerateFn = async (prompt) => {
       // Retry transient rate limits with backoff; a hard 0-quota still throws
       // after the retries and is handled per-batch upstream.
       if (attempt < MAX_RETRIES && /429|RESOURCE_EXHAUSTED|rate limit/i.test(message)) {
-        await sleep(4000 * (attempt + 1));
+        await sleep(RETRY_BACKOFF_MS * (attempt + 1));
         continue;
       }
       throw err;
@@ -91,7 +93,7 @@ function chunk<T>(items: T[], size: number): T[][] {
  */
 export async function analyzePosts(
   posts: AnalyzablePost[],
-  opts: { generate?: GenerateFn; now?: number } = {},
+  opts: { generate?: GenerateFn; now?: number; deadlineMs?: number } = {},
 ): Promise<{ drafts: IdeaDraft[]; errors: SourceError[]; analyzedIds: string[] }> {
   const generate = opts.generate ?? geminiGenerate;
   const now = opts.now ?? Date.now();
@@ -100,6 +102,13 @@ export async function analyzePosts(
   const analyzedIds: string[] = [];
 
   for (const batch of chunk(posts, BATCH_SIZE)) {
+    // Stop starting new batches past the time budget (serverless timeout). Posts
+    // not yet analyzed stay unprocessed and are retried on the next run.
+    if (opts.deadlineMs !== undefined && Date.now() >= opts.deadlineMs) {
+      errors.push({ context: 'budget', message: 'time budget reached; remaining posts deferred to next run' });
+      break;
+    }
+
     const prompt = buildPrompt(batch.map((p, index) => ({ index, title: p.title, body: p.body })));
 
     let text: string;

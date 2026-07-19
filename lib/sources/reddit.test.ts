@@ -76,6 +76,17 @@ describe('fetchReddit (network stubbed — never real)', () => {
     expect(fetchMock).toHaveBeenCalledTimes(1); // no sleep before first request
   });
 
+  it('stops early on HTTP 403 (datacenter block) instead of looping every subreddit', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({ status: 403, ok: false });
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await fetchReddit();
+
+    expect(result.posts).toHaveLength(0);
+    expect(result.errors.some((e) => e.message.includes('403'))).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
   it('records a JSON-parse failure (block page) and continues to other subreddits', async () => {
     vi.useFakeTimers();
     const fetchMock = vi.fn().mockResolvedValue({

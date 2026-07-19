@@ -38,7 +38,11 @@ export async function runIngest(opts: RunOptions): Promise<RunSummary> {
   const { store } = opts;
   const fetchers = opts.fetchers ?? [fetchHackerNews, fetchReddit];
   const now = opts.now ?? Date.now();
-  const limit = opts.limit ?? 30;
+  // Small per-run backlog so a single serverless invocation stays well under the
+  // function timeout; the daily cron drains the rest over subsequent runs.
+  const limit = opts.limit ?? 12;
+  // Leave headroom before Vercel's 60s function limit (maxDuration = 60).
+  const analyzeDeadlineMs = Date.now() + 45_000;
 
   const startedAtMs = now;
   const errors: SourceError[] = [];
@@ -76,6 +80,7 @@ export async function runIngest(opts: RunOptions): Promise<RunSummary> {
       const { drafts, errors: analyzeErrors, analyzedIds } = await analyzePosts(unprocessed, {
         generate: opts.generate,
         now,
+        deadlineMs: analyzeDeadlineMs,
       });
       errors.push(...analyzeErrors);
 
