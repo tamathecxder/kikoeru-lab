@@ -1,13 +1,15 @@
 import Link from 'next/link';
 
+import { cn } from '@/lib/utils';
 import { effortLabel, sourceLabel, urgencyOpacity } from '@/lib/ideas/format';
 import type { Idea } from '@/lib/ideas/types';
 
 /**
  * A single line in the list. No card, no border box, no badge, no number — the
- * urgency shows only as the opacity of a small accent dot.
+ * urgency shows only as the opacity of a small accent dot. When keyboard-selected
+ * it gets a left accent rule (no background change).
  */
-export function IdeaRow({ idea }: { idea: Idea }) {
+export function IdeaRow({ idea, selected = false }: { idea: Idea; selected?: boolean }) {
   const meta = [
     idea.target_user,
     effortLabel(idea.effort),
@@ -15,7 +17,13 @@ export function IdeaRow({ idea }: { idea: Idea }) {
   ].filter(Boolean);
 
   return (
-    <Link href={`/ideas/${idea.id}`} className="group block py-[19px] transition-opacity hover:opacity-70">
+    <Link
+      href={`/ideas/${idea.id}`}
+      className={cn(
+        'group block border-l-2 py-[19px] pl-4 transition-opacity hover:opacity-70',
+        selected ? 'border-accent' : 'border-transparent',
+      )}
+    >
       <div className="flex gap-4">
         <span
           aria-hidden

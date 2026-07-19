@@ -10,7 +10,12 @@ export async function getIdeas(filters: IdeaFilters = {}): Promise<Idea[]> {
   const client = getSupabaseServerClient();
   let query = client.from('ideas').select(IDEA_COLUMNS).order('urgency_score', { ascending: false });
 
-  if (filters.status) query = query.eq('status', filters.status);
+  if (filters.status) {
+    query = query.eq('status', filters.status);
+  } else {
+    // Hide "let go" (skipped) from the default view; still reachable via its filter.
+    query = query.neq('status', 'skipped');
+  }
   if (filters.effort) query = query.eq('effort', filters.effort);
 
   const { data, error } = await query;

@@ -2,8 +2,9 @@ import { getIdeas, getLatestRunAt, getWeeklyHeardCount } from '@/lib/ideas/queri
 import { formatDayMonth, formatUtcTime } from '@/lib/ideas/format';
 import { EFFORTS, IDEA_STATUSES, type Effort, type IdeaFilters, type IdeaStatus } from '@/lib/ideas/types';
 import { FilterBar } from '@/components/filter-bar';
-import { IdeaRow } from '@/components/idea-row';
+import { IdeaList } from '@/components/idea-list';
 import { SiteFooter } from '@/components/site-footer';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,13 +31,16 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
 
   return (
     <main className="mx-auto flex w-full max-w-[720px] flex-1 flex-col px-10 py-14">
-      <header className="flex items-baseline justify-between">
+      <header className="flex items-baseline justify-between gap-6">
         <span className="font-serif text-[22px] lowercase">
           kikoeru <span className="text-muted">lab</span>
         </span>
-        <span className="font-sans text-[11px] tracking-[0.09em] text-muted">
-          {today}&nbsp;·&nbsp;{weekly} heard this week
-        </span>
+        <div className="flex items-baseline gap-6 font-sans text-[11px] tracking-[0.09em] text-muted">
+          <span>
+            {today}&nbsp;·&nbsp;{weekly} heard this week
+          </span>
+          <ThemeToggle />
+        </div>
       </header>
 
       <div className="mt-[60px]">
@@ -47,13 +51,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Sea
         {ideas.length === 0 ? (
           <p className="py-32 text-center font-serif text-[19px] text-muted">nothing heard yet</p>
         ) : (
-          <ul className="divide-y divide-line">
-            {ideas.map((idea) => (
-              <li key={idea.id}>
-                <IdeaRow idea={idea} />
-              </li>
-            ))}
-          </ul>
+          <IdeaList ideas={ideas} />
         )}
       </section>
 
