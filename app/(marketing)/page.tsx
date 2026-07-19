@@ -140,9 +140,12 @@ export default async function LandingPage() {
     <main className="mx-auto flex w-full max-w-[820px] flex-1 flex-col px-6 md:px-10">
       {/* hero */}
       <section className="flex flex-col pt-[96px] md:pt-[160px]">
-        <span className="font-serif text-[22px] lowercase">
-          kikoeru <span className="text-muted">lab</span>
-        </span>
+        <div className="flex items-baseline justify-between gap-6">
+          <span className="font-serif text-[22px] lowercase">
+            kikoeru <span className="text-muted">lab</span>
+          </span>
+          <ThemeToggle />
+        </div>
 
         <h1 className="mt-16 font-serif text-[34px] leading-[1.15] text-text md:text-[60px]">
           ideas you can hear
@@ -287,7 +290,7 @@ export default async function LandingPage() {
       </div>
 
       {/* footer */}
-      <footer className="mt-[64px] flex items-end justify-between border-t border-line pt-10 md:mt-[96px]">
+      <footer className="mb-16 mt-[64px] flex items-end justify-between border-t border-line pt-10 md:mt-[96px]">
         <div className="flex flex-col gap-3">
           <span className="font-serif text-[15px] lowercase">
             kikoeru <span className="text-muted">lab</span>
@@ -297,17 +300,14 @@ export default async function LandingPage() {
             built with Next.js, Supabase, and Gemini
           </span>
         </div>
-        <div className="flex flex-col items-end gap-3">
-          <ThemeToggle />
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-sans text-[11px] tracking-[0.09em] text-muted lowercase hover:opacity-70"
-          >
-            github ↗
-          </a>
-        </div>
+        <a
+          href="https://github.com/yvdist"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-sans text-[11px] tracking-[0.09em] text-muted lowercase hover:opacity-70"
+        >
+          built by yvdist ↗
+        </a>
       </footer>
     </main>
   );
