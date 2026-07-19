@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { effortLabel, formatDayMonth, formatUtcTime, sourceLabel, statusLabel, urgencyOpacity } from '@/lib/ideas/format';
+import { effortLabel, formatDayMonth, formatUtcTime, movedMessage, sourceLabel, statusLabel, urgencyOpacity } from '@/lib/ideas/format';
 
 describe('effortLabel', () => {
   it('renders lowercase effort copy', () => {
@@ -16,6 +16,14 @@ describe('statusLabel', () => {
     expect(statusLabel('interesting')).toBe('worth building');
     expect(statusLabel('building')).toBe('building');
     expect(statusLabel('skipped')).toBe('let go');
+  });
+});
+
+describe('movedMessage', () => {
+  it('renders lowercase move copy from the status', () => {
+    expect(movedMessage('interesting')).toBe('moved to worth building');
+    expect(movedMessage('skipped')).toBe('moved to let go');
+    expect(movedMessage('new')).toBe('moved to heard');
   });
 });
 

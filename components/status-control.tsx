@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
-import { statusLabel } from '@/lib/ideas/format';
+import { movedMessage, statusLabel } from '@/lib/ideas/format';
 import { IDEA_STATUSES, type IdeaStatus } from '@/lib/ideas/types';
+import { toast } from '@/components/toast-host';
 
 export function StatusControl({ id, status }: { id: string; status: IdeaStatus }) {
   const router = useRouter();
@@ -25,6 +26,7 @@ export function StatusControl({ id, status }: { id: string; status: IdeaStatus }
       });
       if (!res.ok) throw new Error(String(res.status));
       setCurrent(next);
+      toast(movedMessage(next));
       router.refresh();
     } catch {
       setError('couldn’t save just now');

@@ -23,6 +23,14 @@ export function statusLabel(status: IdeaStatus): string {
   return STATUS_LABELS[status];
 }
 
+/** Toast copy for a status change, e.g. "moved to worth building". */
+export function movedMessage(status: IdeaStatus): string {
+  return `moved to ${STATUS_LABELS[status]}`;
+}
+
+/** Score components below this read as low and use the --low color. */
+export const LOW_SCORE = 30;
+
 /** Dot opacity for the urgency signal — clamped to a 0.15 floor so it stays visible. */
 export function urgencyOpacity(score: number): number {
   return Math.min(1, Math.max(0.15, score / 100));
