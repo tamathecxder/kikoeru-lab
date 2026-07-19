@@ -46,6 +46,28 @@ export function formatDayMonth(date: Date): string {
   return `${date.getUTCDate()} ${MONTHS[date.getUTCMonth()]}`;
 }
 
+/** e.g. "july 2026" (lowercase) from an ISO timestamp, or null. */
+export function formatMonthYear(iso: string | null): string | null {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  return `${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+}
+
+/** Coarse relative time, e.g. "6 hours ago" / "just now", or null when no time. */
+export function formatRelativeTime(iso: string | null): string | null {
+  if (!iso) return null;
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return null;
+  const diffMin = Math.floor((Date.now() - then) / 60000);
+  if (diffMin < 1) return 'just now';
+  if (diffMin < 60) return `${diffMin} minute${diffMin === 1 ? '' : 's'} ago`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr} hour${diffHr === 1 ? '' : 's'} ago`;
+  const diffDay = Math.floor(diffHr / 24);
+  return `${diffDay} day${diffDay === 1 ? '' : 's'} ago`;
+}
+
 /** e.g. "06:00 utc" from an ISO timestamp, or null when there is none. */
 export function formatUtcTime(iso: string | null): string | null {
   if (!iso) return null;

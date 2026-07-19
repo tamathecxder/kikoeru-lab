@@ -90,6 +90,9 @@ Kikoeru Lab is a quiet **reading** surface, not a monitoring dashboard. Refs: Ic
 ### Layout — FORBIDDEN (breaking one collapses the aesthetic)
 Cards bordered on all sides · any `box-shadow` (except focus ring) · `border-radius` > 2px on content · gradients · emoji in UI · colored progress bars · badges with colored backgrounds · icons beside list items · blinking skeleton loaders · flashy hover animations · sidebar.
 
+### Landing-page-only exceptions (`app/(marketing)/*` — NEVER the dashboard)
+The marketing landing page, and only there, may: (1) show the ripple motif **twice** (once in the hero, once as a quiet divider before the footer); (2) use **large serif section numbers** (48px, `opacity: 0.12`, `--text`, hidden < 768px) beside section headings; (3) use **one large serif italic blockquote** (28px, `opacity: 0.85`, 2px `--accent` left border). Everything else in this design system still applies to the landing page (still no icons/illustrations/photos, no shadows, no off-palette color, no full-bg buttons). These three exceptions must not appear anywhere in the dashboard.
+
 ### Layout — REQUIRED
 Item separator = 1px `--line` + 38px vertical gap · max content width 720px, centered · page padding ≥ 40px · ≥ 60px between header and first content · whitespace is a design element — do not fill it.
 
