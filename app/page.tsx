@@ -1,7 +1,9 @@
-import { getIdeas } from '@/lib/ideas/queries';
+import { getIdeas, getLatestRunAt, getWeeklyHeardCount } from '@/lib/ideas/queries';
+import { formatDayMonth, formatUtcTime } from '@/lib/ideas/format';
 import { EFFORTS, IDEA_STATUSES, type Effort, type IdeaFilters, type IdeaStatus } from '@/lib/ideas/types';
 import { FilterBar } from '@/components/filter-bar';
-import { IdeaCard } from '@/components/idea-card';
+import { IdeaRow } from '@/components/idea-row';
+import { SiteFooter } from '@/components/site-footer';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,36 +23,41 @@ function parseFilters(sp: SearchParams): IdeaFilters {
 
 export default async function Home({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const filters = parseFilters(await searchParams);
-  const ideas = await getIdeas(filters);
+  const [ideas, weekly, lastRun] = await Promise.all([getIdeas(filters), getWeeklyHeardCount(), getLatestRunAt()]);
+
+  const today = formatDayMonth(new Date());
+  const listened = formatUtcTime(lastRun);
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6">
-      <header className="mb-6">
-        <h1 className="text-2xl font-semibold tracking-tight">Kikoeru Lab</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Project ideas mined from real user pain points, ranked by urgency.
-        </p>
+    <main className="mx-auto flex w-full max-w-[720px] flex-1 flex-col px-10 py-14">
+      <header className="flex items-baseline justify-between">
+        <span className="font-serif text-[22px] lowercase">
+          kikoeru <span className="text-muted">lab</span>
+        </span>
+        <span className="font-sans text-[11px] tracking-[0.09em] text-muted">
+          {today}&nbsp;·&nbsp;{weekly} heard this week
+        </span>
       </header>
 
-      <div className="mb-6">
+      <div className="mt-[60px]">
         <FilterBar filters={filters} />
       </div>
 
-      <p className="mb-3 text-xs text-muted-foreground">
-        {ideas.length} idea{ideas.length === 1 ? '' : 's'}
-      </p>
+      <section className="mt-10 flex-1">
+        {ideas.length === 0 ? (
+          <p className="py-32 text-center font-serif text-[19px] text-muted">nothing heard yet</p>
+        ) : (
+          <ul className="divide-y divide-line">
+            {ideas.map((idea) => (
+              <li key={idea.id}>
+                <IdeaRow idea={idea} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
 
-      {ideas.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-border p-10 text-center text-sm text-muted-foreground">
-          No ideas match these filters yet. Run the ingest job to populate the dashboard.
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {ideas.map((idea) => (
-            <IdeaCard key={idea.id} idea={idea} />
-          ))}
-        </div>
-      )}
+      <SiteFooter meta={listened ? `last listened ${listened}` : undefined} />
     </main>
   );
 }

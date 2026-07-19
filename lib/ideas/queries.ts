@@ -25,3 +25,28 @@ export async function getIdeaById(id: string): Promise<Idea | null> {
   if (error) throw new Error(`getIdeaById: ${error.message}`);
   return (data as unknown as Idea) ?? null;
 }
+
+/** Count of ideas heard in the last 7 days — the header's "N heard this week". */
+export async function getWeeklyHeardCount(): Promise<number> {
+  const client = getSupabaseServerClient();
+  const since = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+  const { count, error } = await client
+    .from('ideas')
+    .select('id', { count: 'exact', head: true })
+    .gte('created_at', since);
+  if (error) throw new Error(`getWeeklyHeardCount: ${error.message}`);
+  return count ?? 0;
+}
+
+/** ISO timestamp of the most recent ingest run, or null if none — "last listened". */
+export async function getLatestRunAt(): Promise<string | null> {
+  const client = getSupabaseServerClient();
+  const { data, error } = await client
+    .from('ingest_runs')
+    .select('started_at')
+    .order('started_at', { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  if (error) throw new Error(`getLatestRunAt: ${error.message}`);
+  return (data?.started_at as string | undefined) ?? null;
+}

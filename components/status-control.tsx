@@ -27,14 +27,14 @@ export function StatusControl({ id, status }: { id: string; status: IdeaStatus }
       setCurrent(next);
       router.refresh();
     } catch {
-      setError('Update failed');
+      setError('couldn’t save just now');
     } finally {
       setPending(false);
     }
   }
 
   return (
-    <div className="flex flex-wrap items-center gap-1.5">
+    <div className="flex flex-wrap items-center gap-2 font-sans text-[11px] tracking-[0.09em]">
       {IDEA_STATUSES.map((s) => (
         <button
           key={s}
@@ -43,16 +43,14 @@ export function StatusControl({ id, status }: { id: string; status: IdeaStatus }
           onClick={() => update(s)}
           aria-pressed={s === current}
           className={cn(
-            'rounded-md border px-2.5 py-1 text-xs font-medium transition-colors disabled:opacity-50',
-            s === current
-              ? 'border-primary bg-primary text-primary-foreground'
-              : 'border-border text-muted-foreground hover:bg-secondary hover:text-foreground',
+            'rounded-[2px] border px-2.5 py-1 lowercase transition-colors disabled:opacity-50',
+            s === current ? 'border-muted text-text' : 'border-line text-muted hover:border-muted',
           )}
         >
           {statusLabel(s)}
         </button>
       ))}
-      {error && <span className="text-xs text-red-400">{error}</span>}
+      {error && <span className="text-muted">{error}</span>}
     </div>
   );
 }

@@ -12,15 +12,13 @@ function href(filters: IdeaFilters): string {
   return q ? `/?${q}` : '/';
 }
 
-function Chip({ label, active, target }: { label: string; active: boolean; target: string }) {
+function Item({ label, active, target }: { label: string; active: boolean; target: string }) {
   return (
     <Link
       href={target}
       className={cn(
-        'rounded-full border px-3 py-1 text-xs transition-colors',
-        active
-          ? 'border-foreground bg-foreground text-background'
-          : 'border-border text-muted-foreground hover:text-foreground',
+        'pb-[5px] transition-opacity hover:opacity-70',
+        active ? 'border-b border-text text-text' : 'text-muted',
       )}
     >
       {label}
@@ -30,29 +28,17 @@ function Chip({ label, active, target }: { label: string; active: boolean; targe
 
 export function FilterBar({ filters }: { filters: IdeaFilters }) {
   return (
-    <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="w-14 text-xs uppercase tracking-wide text-muted-foreground">Status</span>
-        <Chip label="All" active={!filters.status} target={href({ effort: filters.effort })} />
+    <div className="flex flex-wrap items-center justify-between gap-y-4 font-sans text-[11px] tracking-[0.09em]">
+      <div className="flex flex-wrap items-center gap-x-[26px] gap-y-3">
+        <Item label="all" active={!filters.status} target={href({ effort: filters.effort })} />
         {IDEA_STATUSES.map((s: IdeaStatus) => (
-          <Chip
-            key={s}
-            label={statusLabel(s)}
-            active={filters.status === s}
-            target={href({ status: s, effort: filters.effort })}
-          />
+          <Item key={s} label={statusLabel(s)} active={filters.status === s} target={href({ status: s, effort: filters.effort })} />
         ))}
       </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="w-14 text-xs uppercase tracking-wide text-muted-foreground">Effort</span>
-        <Chip label="All" active={!filters.effort} target={href({ status: filters.status })} />
+      <div className="flex flex-wrap items-center gap-x-[26px] gap-y-3">
+        <Item label="all" active={!filters.effort} target={href({ status: filters.status })} />
         {EFFORTS.map((e: Effort) => (
-          <Chip
-            key={e}
-            label={effortLabel(e)}
-            active={filters.effort === e}
-            target={href({ status: filters.status, effort: e })}
-          />
+          <Item key={e} label={effortLabel(e)} active={filters.effort === e} target={href({ status: filters.status, effort: e })} />
         ))}
       </div>
     </div>

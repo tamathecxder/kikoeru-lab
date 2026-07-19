@@ -38,25 +38,6 @@
   /* Fonts (next/font sets --font-newsreader / --font-inter-tight in layout) */
   --font-serif: var(--font-newsreader);
   --font-sans: var(--font-inter-tight);
-
-  /* Back-compat aliases — TEMPORARY. The pages/components from the functional
-     build still reference these shadcn token names; keep them mapped to brand
-     vars so the app compiles until those pages are rebuilt on the new system. */
-  --color-background: var(--bg);
-  --color-foreground: var(--text);
-  --color-card: var(--surface);
-  --color-card-foreground: var(--text);
-  --color-popover: var(--surface);
-  --color-popover-foreground: var(--text);
-  --color-secondary: var(--surface);
-  --color-secondary-foreground: var(--text);
-  --color-muted-foreground: var(--muted);
-  --color-border: var(--line);
-  --color-input: var(--line);
-  --color-primary: var(--text);
-  --color-primary-foreground: var(--bg);
-  --color-ring: var(--accent);
-  --color-accent-foreground: var(--bg);
 }
 
 @layer base {
