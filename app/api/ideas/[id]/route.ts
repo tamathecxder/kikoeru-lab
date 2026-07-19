@@ -7,7 +7,14 @@ import { logger } from '@/lib/utils/logger';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const patchSchema = z.object({ status: z.enum(IDEA_STATUSES) });
+const patchSchema = z
+  .object({
+    status: z.enum(IDEA_STATUSES).optional(),
+    notes: z.string().optional(),
+  })
+  .refine((v) => v.status !== undefined || v.notes !== undefined, {
+    message: 'provide status and/or notes',
+  });
 
 export async function PATCH(
   request: Request,
@@ -24,14 +31,18 @@ export async function PATCH(
 
   const parsed = patchSchema.safeParse(json);
   if (!parsed.success) {
-    return Response.json({ error: 'status must be one of ' + IDEA_STATUSES.join(', ') }, { status: 400 });
+    return Response.json({ error: 'provide a valid status and/or notes' }, { status: 400 });
   }
+
+  const update: { status?: string; notes?: string } = {};
+  if (parsed.data.status !== undefined) update.status = parsed.data.status;
+  if (parsed.data.notes !== undefined) update.notes = parsed.data.notes;
 
   try {
     const client = getSupabaseServerClient();
     const { data, error } = await client
       .from('ideas')
-      .update({ status: parsed.data.status })
+      .update(update)
       .eq('id', id)
       .select('id, status')
       .maybeSingle();

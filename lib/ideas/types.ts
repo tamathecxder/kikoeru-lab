@@ -27,6 +27,7 @@ export interface Idea {
   urgency_score: number;
   score_breakdown: ScoreBreakdown | null;
   status: IdeaStatus;
+  notes: string | null;
   created_at: string;
   raw_posts: IdeaSource | null;
 }

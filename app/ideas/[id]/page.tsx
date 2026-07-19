@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { getIdeaById } from '@/lib/ideas/queries';
-import { sourceLabel } from '@/lib/ideas/format';
+import { LOW_SCORE, sourceLabel } from '@/lib/ideas/format';
 import type { ScoreBreakdown } from '@/lib/ai/scoring';
+import { NotesField } from '@/components/notes-field';
 import { SiteFooter } from '@/components/site-footer';
 import { StatusControl } from '@/components/status-control';
 
@@ -61,13 +62,33 @@ export default async function IdeaDetail({ params }: { params: Promise<{ id: str
           score breakdown — {idea.urgency_score}/100
         </p>
         {b ? (
-          <ul className="mt-3 space-y-1.5 font-serif text-[16px] text-text">
-            {BREAKDOWN_ROWS.map(({ key, label }) => (
-              <li key={key}>
-                {label} <span className="text-muted">—</span>{' '}
-                <span className="font-sans text-[13px] tabular-nums text-muted">{b[key]}</span>
-              </li>
-            ))}
+          <ul className="mt-3 space-y-3 font-serif text-[16px] text-text">
+            {BREAKDOWN_ROWS.map(({ key, label }) => {
+              const value = b[key];
+              const low = value < LOW_SCORE;
+              return (
+                <li key={key}>
+                  <div className="flex items-baseline gap-2">
+                    <span>{label}</span>
+                    <span className="text-muted">—</span>
+                    <span
+                      className="font-sans text-[13px] tabular-nums"
+                      style={{ color: low ? 'var(--low)' : 'var(--muted)' }}
+                    >
+                      {value}
+                    </span>
+                  </div>
+                  <div
+                    className="mt-1.5 h-[2px]"
+                    style={{
+                      width: `${value}%`,
+                      background: low ? 'var(--low)' : 'var(--accent)',
+                      opacity: low ? 1 : 0.5,
+                    }}
+                  />
+                </li>
+              );
+            })}
           </ul>
         ) : (
           <p className="mt-2 font-serif text-[16px] text-muted">no breakdown recorded</p>
@@ -86,6 +107,13 @@ export default async function IdeaDetail({ params }: { params: Promise<{ id: str
           </a>
         </Section>
       )}
+
+      <div className="mt-9">
+        <p className="font-sans text-[11px] tracking-[0.09em] text-muted lowercase">notes</p>
+        <div className="mt-2">
+          <NotesField id={idea.id} initial={idea.notes} />
+        </div>
+      </div>
 
       <SiteFooter />
     </main>

@@ -15,6 +15,8 @@
   --muted: #8a8783;
   --line: #d6d3cd;
   --accent: #4a5d52;
+  /* The ONE exception to accent-sparing: score components below 30. Nowhere else. */
+  --low: #a8674f;
 }
 
 [data-theme="dark"] {
@@ -24,6 +26,7 @@
   --muted: #7d7a74;
   --line: #33352f;
   --accent: #7d9384;
+  --low: #c08a72;
 }
 
 @theme inline {
@@ -34,6 +37,7 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
+  --color-low: var(--low);
 
   /* Fonts (next/font sets --font-newsreader / --font-inter-tight in layout) */
   --font-serif: var(--font-newsreader);
